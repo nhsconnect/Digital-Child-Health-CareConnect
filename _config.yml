@@ -2,7 +2,7 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Digital Child Health (DCH) | FHIR&reg;
+topnav_title: Digital Child Health (DCH) CareConnect | FHIR&reg;
 # this appears on the top navigation bar next to the home button
 
 site_title: Digital Child Health (DCH) 
@@ -102,9 +102,9 @@ description: "This implementation guide supports the publishing of Digital Child
 sitemap: true
 
 # needed for sitemap.xml file only
-url: https://nhsconnect.github.io/Digital-Child-Health-STU3
+url: https://nhsconnect.github.io/Digital-Child-Health-CareConnect
 
-repository: nhsconnect/Digital-Child-Health-STU3
+repository: nhsconnect/Digital-Child-Health-CareConnect
 
 gist:
   noscript: false
