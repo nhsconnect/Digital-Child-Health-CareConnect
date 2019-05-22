@@ -1,5 +1,5 @@
 ---
-title: Introduction to Digital Child Health Event Messages 
+title: Introduction to Digital Child Health Event (CareConnect) Messages 
 keywords: homepage
 tags: [overview]
 sidebar: overview_sidebar
