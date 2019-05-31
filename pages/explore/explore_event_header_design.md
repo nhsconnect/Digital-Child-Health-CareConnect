@@ -30,9 +30,10 @@ This event header information must consist of the following **mandatory** items 
 
 An **optional** event-sequence element may be sent which, if included, **must** contain at least one of:
 
-| DCH Event Header item requirement      | FHIR resource            | FHIR element                                                     |Constraints            |
-| change timestamp         				 | Event-MessageHeader-1    | The resource meta.lastUpdated for the MessageHeader 				   ||
-| sequence number         | Event-MessageHeader-1    | The resource meta.versionId for the MessageHeader 				   ||
+| DCH Event Header item requirement      | FHIR resource            | FHIR element                                                     |
+|----------------------------------------|--------------------------|------------------------------------------------------------------|
+| change timestamp         				 | Event-MessageHeader-1    | The resource meta.lastUpdated for the MessageHeader 				   |
+| sequence number         | Event-MessageHeader-1    | The resource meta.versionId for the MessageHeader 				   |
 
 
 
