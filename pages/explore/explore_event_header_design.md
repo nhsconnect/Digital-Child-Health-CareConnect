@@ -30,6 +30,13 @@ This event header information must consist of the following **mandatory** items 
 
 The remaining resources in the bundle depend on the Digital Child Health Event listed under the [Messages](explore.html) section.
 
+### Linkage Diagram ###
+
+This Linkage diagram defines the required references that SHALL be made between resources within the DCH Event Message bundle. It includes both Header and Payload resources (but omits the DCH-Bundle-1 wrapper).
+
+<img src="images/explore/MessageHeader.png">
+
+
 ## Example Message Header ##
 
 <script src="https://gist.github.com/IOPS-DEV/a1d4a7f89b0658f3b9a0ace6dda09df9.js"></script>
