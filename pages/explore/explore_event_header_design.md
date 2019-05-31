@@ -41,7 +41,7 @@ The remaining resources in the bundle depend on the Digital Child Health Event l
 
 ## Linkage Diagram ##
 
-This Linkage diagram defines the required references that SHALL be made between resources within the DCH Event Message bundle. It includes both Header and Payload resources (but omits the DCH-Bundle-1 wrapper).
+This Linkage diagram defines the required references that SHALL be made between resources within the Event Message bundle. It includes both Header and Payload resources (but omits the Bundle wrapper).
 
 <img src="images/explore/MessageHeader.png">
 
