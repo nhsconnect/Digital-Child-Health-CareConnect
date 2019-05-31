@@ -1,10 +1,10 @@
 ---
-title: Digital Child Health Event Header Design
+title: Event Header Design
 keywords:  messaging, bundles
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_event_header_design.html
-summary: "The standard event header information applicable to Digital Child Health (DCH) event messages"
+summary: "The standard event header information applicable to event messages"
 ---
 
 ## Event header information ##
@@ -37,7 +37,7 @@ An **optional** event-sequence element may be sent which, if included, **must
 
 
 
-The remaining resources in the bundle depend on the Digital Child Health Event listed under the [Messages](explore.html) section.
+The remaining resources in the bundle depend on the Event listed under the [Messages](explore.html) section.
 
 ## Linkage Diagram ##
 
