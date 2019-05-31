@@ -28,9 +28,17 @@ This event header information must consist of the following **mandatory** items 
 | event published date                   | Event-MessageHeader-1    | timestamp                                                        |            |
 | a publication reference number         | Event-MessageHeader-1    | The resource identifier for the MessageHeader 				   |This will use a UUID format.|
 
+An **optional** event-sequence element may be sent which, if included, **must** contain at least one of:
+
+| DCH Event Header item requirement      | FHIR resource            | FHIR element                                                     |Constraints            |
+| change timestamp         				 | Event-MessageHeader-1    | The resource meta.lastUpdated for the MessageHeader 				   ||
+| sequence number         | Event-MessageHeader-1    | The resource meta.versionId for the MessageHeader 				   ||
+
+
+
 The remaining resources in the bundle depend on the Digital Child Health Event listed under the [Messages](explore.html) section.
 
-### Linkage Diagram ###
+## Linkage Diagram ##
 
 This Linkage diagram defines the required references that SHALL be made between resources within the DCH Event Message bundle. It includes both Header and Payload resources (but omits the DCH-Bundle-1 wrapper).
 
