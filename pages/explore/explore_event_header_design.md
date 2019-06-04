@@ -18,7 +18,8 @@ This event header information must consist of the following **mandatory** items 
 | NHS Number                             | CareConnect-Patient-1   	| identifier using NHS Number slice                                |            |
 | Date of Birth                          | CareConnect-Patient-1   	| birthDate                                                        |            |
 | name                                   | CareConnect-Patient-1   	| name                                                             |            |
-| event type                             | Event-MessageHeader-1    | event                                                            |            |
+| event 	                             | Event-MessageHeader-1    | event                                                            |            |
+| event type                             | Event-MessageHeader-1    | extension(messageEventType)                                                           |            |
 | type of service originating the event  | CareConnect-HealthcareService-1  | type 			                                           |This will contain a code from the ValueSet [DCH-Specialty-1.](https://fhir.nhs.uk/STU3/ValueSet/DCH-Specialty-1)|
 | service provider originating the event | CareConnect-Encounter-1 	| serviceProvider                                                  |            |
 | IT system holding the event data       | Event-MessageHeader-1      | source                                                         |            |
