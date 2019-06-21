@@ -1,7 +1,7 @@
 entries:
 - title: Digital Child Health (DCH)  
   product: Digital Child Health (DCH) CareConnect
-  version: 1.0.0-ReleaseCandidate
+  version: 1.0.0-Beta
   levels: one
   folders:
 
@@ -70,137 +70,137 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Additional Demographics
-          url: /explore_additional_demographics.html
-          output: web
-        - title: Admission Details
-          url: /explore_admission_details.html
-          output: web
-        - title: Allergies and Adverse Reactions
-          url: /explore_allergies_and_adverse_reactions.html
-          output: web
-        - title: Assessment Scales
-          url: /explore_assessment_scales.html
-          output: web
-        - title: Birth Details
-          url: /explore_birth_details.html
-          output: web
-        - title: Blood Spot Sample Taken
-          url: /explore_blood_spot_sample_taken.html
-          output: web
-        - title: Blood Spot Card Received
-          url: /explore_blood_spot_card_received.html
-          output: web
-        - title: Blood Spot Test Outcome
-          url: /explore_blood_spot_test_outcome.html
-          output: web
+#        - title: Additional Demographics
+#          url: /explore_additional_demographics.html
+#          output: web
+#        - title: Admission Details
+#          url: /explore_admission_details.html
+#          output: web
+#        - title: Allergies and Adverse Reactions
+#          url: /explore_allergies_and_adverse_reactions.html
+#          output: web
+#        - title: Assessment Scales
+#          url: /explore_assessment_scales.html
+#          output: web
+#        - title: Birth Details
+#          url: /explore_birth_details.html
+#          output: web
+#        - title: Blood Spot Sample Taken
+#          url: /explore_blood_spot_sample_taken.html
+#          output: web
+#        - title: Blood Spot Card Received
+#          url: /explore_blood_spot_card_received.html
+#          output: web
+#        - title: Blood Spot Test Outcome
+#          url: /explore_blood_spot_test_outcome.html
+#          output: web
       - title: C - E
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Clinical Risk Factors
-          url: /explore_clinical_risk_factors.html
-          output: web
-        - title: Developmental Skills
-          url: /explore_developmental_skills.html
-          output: web
-        - title: Discharge Details
-          url: /explore_discharge_details.html
-          output: web
-        - title: Early Years Progress
-          url: /explore_early_years_progress.html
-          output: web
-        - title: Educational History
-          url: /explore_educational_history.html
-          output: web
-        - title: Emergency Care Attendance
-          url: /explore_emergency_care_attendance.html
-          output: web
-        - title: Examination Findings
-          url: /explore_examination_findings.html
-          output: web
+#        - title: Clinical Risk Factors
+#          url: /explore_clinical_risk_factors.html
+#          output: web
+#        - title: Developmental Skills
+#          url: /explore_developmental_skills.html
+#          output: web
+#        - title: Discharge Details
+#          url: /explore_discharge_details.html
+#          output: web
+#        - title: Early Years Progress
+#          url: /explore_early_years_progress.html
+#          output: web
+#        - title: Educational History
+#          url: /explore_educational_history.html
+#          output: web
+#        - title: Emergency Care Attendance
+#          url: /explore_emergency_care_attendance.html
+#          output: web
+#        - title: Examination Findings
+#          url: /explore_examination_findings.html
+#          output: web
       - title: F - L
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Family History
-          url: /explore_family_history.html
-          output: web
-        - title: Feeding Status
-          url: /explore_feeding_status.html
-          output: web
-        - title: Individual Requirements
-          url: /explore_individual_requirements.html
-          output: web
-        - title: Information and Advice Given
-          url: /explore_information_and_advice_given.html
-          output: web
-        - title: Investigation Results
-          url: /explore_investigation_results.html
-          output: web 
-        - title: Legal Information
-          url: /explore_legal_information.html
-          output: web
+#        - title: Family History
+#          url: /explore_family_history.html
+#          output: web
+#        - title: Feeding Status
+#          url: /explore_feeding_status.html
+#          output: web
+#        - title: Individual Requirements
+#          url: /explore_individual_requirements.html
+#          output: web
+#        - title: Information and Advice Given
+#          url: /explore_information_and_advice_given.html
+#          output: web
+#        - title: Investigation Results
+#          url: /explore_investigation_results.html
+#          output: web 
+#        - title: Legal Information
+#          url: /explore_legal_information.html
+#          output: web
       - title: M - O
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Medication Administration
-          url: /explore_medication_administration.html
-          output: web
-        - title: Medication Statement
-          url: /explore_medication_statement.html
-          output: web
+#        - title: Medication Administration
+#          url: /explore_medication_administration.html
+#          output: web
+#        - title: Medication Statement
+#          url: /explore_medication_statement.html
+#          output: web
         - title: Newborn Hearing
           url: /explore_newborn_hearing.html
           output: web
         - title: NIPE Outcome
           url: /explore_nipe_outcome.html
           output: web
-        - title: Observations
-          url: /explore_observations.html
-          output: web
+#        - title: Observations
+#          url: /explore_observations.html
+#          output: web
       - title: P - Q
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Parent Guardian or Personal Comment
-          url: /explore_parent_guardian_or_personal_comment.html
-          output: web
-        - title: Personal Contacts
-          url: /explore_personal_contacts.html
-          output: web
-        - title: Plan and Requested Actions
-          url: /explore_plan_and_requested_actions.html
-          output: web
-        - title: Problem List
-          url: /explore_problem_list.html
-          output: web
-        - title: Professional Summary
-          url: /explore_professional_summary.html
-          output: web
-        - title: Professional Contacts
-          url: /explore_professional_contacts.html
-          output: web
+#        - title: Parent Guardian or Personal Comment
+#          url: /explore_parent_guardian_or_personal_comment.html
+#          output: web
+#        - title: Personal Contacts
+#          url: /explore_personal_contacts.html
+#          output: web
+#        - title: Plan and Requested Actions
+#          url: /explore_plan_and_requested_actions.html
+#          output: web
+#        - title: Problem List
+#          url: /explore_problem_list.html
+#          output: web
+#        - title: Professional Summary
+#          url: /explore_professional_summary.html
+#          output: web
+#        - title: Professional Contacts
+#          url: /explore_professional_contacts.html
+#          output: web
       - title: R - Z
 #        url: /explore.html
         output: web
         subfolderitems:
-        - title: Referral
-          url: /explore_referral.html
-          output: web
-        - title: Safety Alerts
-          url: /explore_safety_alerts.html
-          output: web
-        - title: Social Context Household
-          url: /explore_social_context_household.html
-          output: web
-        - title: Social Context
-          url: /explore_social_context.html
-          output: web
-        - title: Vaccinations
-          url: /explore_vaccination_administration.html
-          output: web
+#        - title: Referral
+#          url: /explore_referral.html
+#          output: web
+#        - title: Safety Alerts
+#          url: /explore_safety_alerts.html
+#          output: web
+#        - title: Social Context Household
+#          url: /explore_social_context_household.html
+#          output: web
+#        - title: Social Context
+#          url: /explore_social_context.html
+#          output: web
+#        - title: Vaccinations
+#          url: /explore_vaccination_administration.html
+#          output: web
   - title: Additional Content
     output: web
     folderitems:
