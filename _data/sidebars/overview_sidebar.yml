@@ -70,9 +70,9 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Additional Demographics
-#          url: /explore_additional_demographics.html
-#          output: web
+        - title: Additional Demographics
+          url: /explore_additional_demographics.html
+          output: web
 #        - title: Admission Details
 #          url: /explore_admission_details.html
 #          output: web
@@ -85,15 +85,15 @@ entries:
 #        - title: Birth Details
 #          url: /explore_birth_details.html
 #          output: web
-#        - title: Blood Spot Sample Taken
-#          url: /explore_blood_spot_sample_taken.html
-#          output: web
-#        - title: Blood Spot Card Received
-#          url: /explore_blood_spot_card_received.html
-#          output: web
-#        - title: Blood Spot Test Outcome
-#          url: /explore_blood_spot_test_outcome.html
-#          output: web
+        - title: Blood Spot Sample Taken
+          url: /explore_blood_spot_sample_taken.html
+          output: web
+        - title: Blood Spot Card Received
+          url: /explore_blood_spot_card_received.html
+          output: web
+        - title: Blood Spot Test Outcome
+          url: /explore_blood_spot_test_outcome.html
+          output: web
       - title: C - E
 #        url: /explore.html
         output: web
