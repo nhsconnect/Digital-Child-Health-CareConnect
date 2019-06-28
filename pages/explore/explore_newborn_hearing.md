@@ -46,84 +46,84 @@ The following requirements and resource population guidance should be followed i
 
 The Bundle resource included as part of the event message SHALL conform to the [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| type | 1..1 | Fixed value: message |
 
 
 ### [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1)
 
 The Event-MessageHeader-1 resource included as part of the event message SHALL conform to the [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| extension(messageEventType) | 1..1 |  |
+| event | 1..1 | Fixed Value: ​newborn-hearing-1 (Newborn Hearing) |
+| responsible | 1..1 | This will reference the responsible Organization resource |
+| focus | 1..1 | This will reference the CareConnect-Encounter-1 resource which contains information relating to the event message. |
 
 
 ### [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
 
 The CareConnect-Organization-1 resource included as part of the event message SHALL conform to the [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..* |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| identifier.system | 1..1 | Fixed value: https://fhir.nhs.uk/Id/ods-organization-code |
+| identifier.system | 1..1 | Organisation’s ODS Organization Code |
+| name | 1..1 | Organisation’s Name |
 
 
 ### [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1)
 
 The CareConnect-HealthcareService-1 resource included as part of the event message SHALL conform to the [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| providedBy | 1..1 | This will reference the ‘sender’ organization of the event message. |
+| type | 1..1 | This will represent the type of service responsible for the event message. This will have a fixed value from the ValueSet [CareConnect-CareSettingType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1) |
 
 
 ### [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
 The CareConnect-Patient-1 resource included as part of the event message SHALL conform to the [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| meta.versionId | 1..1 | This element will contain the serial change number (SCN) of the patient record within Spine at the time this event was published. |
+| identifier | 1..1 | Patient NHS Number SHALL be included within the nhsNumber identifier slice |
+| name (official) | 1..1 | Patients name as registered on PDS, included within the resource as the official name element slice |
+| birthDate | 1..1 | The patient birth date shall be included in the patient resource |
 
 
 ### [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
 
 The CareConnect-Encounter-1 resource included as part of the event message SHALL conform to the [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| serviceProvider | 1..1 | This will reference the Organisation resource hosting the Encounter |
+| location | 1..1 | This will reference the Encounter's Location |
+| subject | 1..1 | This will reference the patient resource representing the subject of this event |
 
 
 ### [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
 
 The CareConnect-Location-1 resource included as part of the event message SHALL conform to the [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
-
-| Element | Cardinality | Additional Guidance |
-| --- | --- | --- |
-|  |  |  |
-
+| Resource Cardinality | 0..1 |
 
 
 ### [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
@@ -146,7 +146,9 @@ The CareConnect-PractitionerRole-1 resource included as part of the event messag
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
+| organization | 1..1 | This will reference the Organization resource responsible for the event |
+| practitioner | 1..1 | This will reference the Practitioner resource responsible for the event |
+
 
 
 
@@ -158,8 +160,7 @@ The CareConnect-Procedure-1 resource included as part of the event message SHALL
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| subject | 1..1 | This will reference the patient resource representing the subject of this event |
 
 
 ### [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
@@ -170,8 +171,7 @@ The CareConnect-Observation-1 resource included as part of the event message SHA
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
-
+| subject | 1..1 | The number of births observation will reference the mother patient resource. |
 
 
 ### [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1)
@@ -182,7 +182,9 @@ The CareConnect-Communication-1 resource included as part of the event message S
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-|  |  |  |
+| status | 1..1 | Fixed value: completed |
+| sender | 1..1 | This will reference the sending organization of the event message. |
+| subject | 1..1 | This will reference the patient resource representing the patient who is the subject of this event. |
 
 
 ## PDS Change of Address Example ##
