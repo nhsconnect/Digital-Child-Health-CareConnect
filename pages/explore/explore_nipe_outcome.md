@@ -24,7 +24,7 @@ The following FHIR profiles are used to form the NIPE Outcome Event Message Bund
 - [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1)
 
 
-## Bundle structure
+## Bundle Structure
 
 Specifies mandatory referencing within the Event Message Bundle.
 
@@ -35,7 +35,7 @@ Specifies mandatory referencing within the Event Message Bundle.
 
 
 
-## Resource population requirements and guidance ##
+## Resource Population Requirements and Guidance ##
 
 The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
 
@@ -89,6 +89,7 @@ The CareConnect-HealthcareService-1 resource included as part of the event messa
 | --- | --- | --- |
 | providedBy | 1..1 | This will reference the ‘sender’ organization of the event message. |
 | type | 1..1 | This will represent the type of service responsible for the event message. This will have a fixed value from the ValueSet [CareConnect-CareSettingType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1) |
+| specialty | 1..1 | HealthcareService.specialty SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-Specialty-1 |
 
 
 ### [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
@@ -113,6 +114,8 @@ The CareConnect-Encounter-1 resource included as part of the event message SHALL
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
+| Encounter.type.coding(childHealthEncounterType) | 1..1 | Encounter.type.coding(childHealthEncounterType) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1 |
+| Encounter.reason.coding(snomedCT) | 1..1 | Encounter.reason.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AdmissionReason-1 |
 | serviceProvider | 1..1 | This will reference the Organisation resource hosting the Encounter |
 | location | 1..1 | This will reference the Encounter's Location |
 | subject | 1..1 | This will reference the patient resource representing the subject of this event |
@@ -136,7 +139,6 @@ The CareConnect-Practitioner-1 resource included as part of the event message SH
 |  |  |  |
 
 
-
 ### [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 
 The CareConnect-PractitionerRole-1 resource included as part of the event message SHALL conform to the [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1) constrained FHIR profile and the additional population guidance as per the table below:
@@ -147,7 +149,9 @@ The CareConnect-PractitionerRole-1 resource included as part of the event messag
 | --- | --- | --- |
 | organization | 1..1 | This will reference the Organization resource responsible for the event |
 | practitioner | 1..1 | This will reference the Practitioner resource responsible for the event |
-
+| PractitionerRole.code(careProfessionalType) | 1..1 | PractitionerRole.code(careProfessionalType) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-ProfessionalType-1 |
+| PractitionerRole.code(keyWorkerStatus) | 1..1 | PractitionerRole.code(keyWorkerStatus) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-KeyWorkerStatus-1 |
+| PractitionerRole.specialty | 1..1 | PractitionerRole.specialty SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-Specialty-1 |
 
 
 ### [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)
@@ -159,6 +163,44 @@ The CareConnect-Procedure-1 resource included as part of the event message SHALL
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | subject | 1..1 | This will reference the patient resource representing the subject of this event |
+
+For each of the Procedure resources representing a Test Outcome:
+
+
+### CareConnect-Procedure-1 (Physical Examination, Hips)
+        | Element | Cardinality | Additional Guidance |
+        | --- | --- | --- |
+        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+        | Procedure.code.coding.code | 1..1 | Fixed Value: 985531000000102 |
+        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, hip examination |
+        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+
+
+### CareConnect-Procedure-1 (Physical Examination, Eyes)
+        | Element | Cardinality | Additional Guidance |
+        | --- | --- | --- |
+        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+        | Procedure.code.coding.code | 1..1 | Fixed Value: 988361000000105 |
+        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, eye examination |
+        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+
+
+### CareConnect-Procedure-1 (Physical Examination, Testes)
+        | Element | Cardinality | Additional Guidance |
+        | --- | --- | --- |
+        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+        | Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
+        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, testis examination |
+        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+
+
+### CareConnect-Procedure-1 (Physical Examination, Heart)
+        | Element | Cardinality | Additional Guidance |
+        | --- | --- | --- |
+        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct ||
+        | Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
+        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, heart examination |
+        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
 
 
 ### [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1)
@@ -172,6 +214,9 @@ The CareConnect-Communication-1 resource included as part of the event message S
 | status | 1..1 | Fixed value: completed |
 | sender | 1..1 | This will reference the sending organization of the event message. |
 | subject | 1..1 | This will reference the patient resource representing the patient who is the subject of this event. |
+| Communication.category.coding.system | 1..1 | Fixed Value: https://fhir.nhs.uk/STU3/CodeSystem/DCH-ProfessionalCommentType-1 |
+| Communication.category.coding.code | 1..1 | 009 OR 010 |
+| Communication.category.coding.display | 1..1 | 'Newborn and Infant Physical Examination (72 hours)' OR 'Newborn and Infant Physical Examination (6-8 Weeks)' |
 
 
 ## PDS Change of Address Example ##
