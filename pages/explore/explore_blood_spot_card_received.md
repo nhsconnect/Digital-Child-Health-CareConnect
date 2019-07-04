@@ -30,10 +30,26 @@ Specifies mandatory referencing within the Event Message Bundle.
 	Blood Spot Card Received Bundle <a href="images/explore/dch-bloodspotcardreceived.png" target="_blank">(open in new TAB)</a>
 </div>
 
+## Blood Spot Card Received Event data item mapping to FHIR profiles ##
+
+The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
+
+<table>
+<tr>
+<th>DCH Data Item</th><th>FHIR resource element</th><th>Mandatory/<br/>Required/<br/>Optional</th><th>Notes</th>
+</tr>
+<tr>
+<td>Date/Time Sample Received</td><td>CareConnect-Specimen-1.receivedTime</td><td>Required</td><td></td>
+</tr>
+<tr>
+<td>Laboratory Identifier</td><td>CareConnect-Organization-1.identifier</td><td>Required</td><td></td>
+</tr>
+</table>
+
 
 ## Resource Population Requirements and Guidance ##
 
-The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
+The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the data item mapping above and in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
 
 
 ### [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
@@ -136,10 +152,9 @@ The CareConnect-Specimen-1 resource included as part of the event message SHALL 
 | receivedTime | 1..1 | This will hold Date/Time the sample is received |
 
 
-## PDS Change of Address Example ##
-Placeholder for Blood Spot Card Received example - like it says, it's CoA
-<script src="https://gist.github.com/IOPS-DEV/828562b2e3edaec1ed43f48645f5376a.js"></script>
+## DCH Blood Spot Card Received Example ##
 
+<script src="https://gist.github.com/IOPS-DEV/0bf017a7bb5be2eaf4b5dc7593f10fef.js"></script>
 
 ## Profile Change Mappings for Blood Spot Card Received ##
 
@@ -158,32 +173,4 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 
 
 <hr/>
-<hr/>
 
-## Blood Spot Card Received Event data item mapping to FHIR profiles ##
-
-The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
-
-<table>
-<tr>
-<th>DCH Data Item</th><th>FHIR resource element</th><th>Mandatory/<br/>Required/<br/>Optional</th><th>Notes</th>
-</tr>
-<tr>
-<td>Date/Time Sample Received</td><td>DCH-NewbornBloodSpotScreening-Specimen-1.receivedTime</td><td>Required</td><td></td>
-</tr>
-<tr>
-<td>Laboratory Identifier</td><td>CareConnect-Organization-1.identifier</td><td>Required</td><td></td>
-</tr>
-</table>
-
-### Linkage Diagram ###
-
-<img src="images/explore/BloodSpotCardReceived.png">
-
-### Blood Spot Card Received Event XML Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/0b8caa42ac0f9397b9ef6d7a540498f0.js"></script>
-
-### Blood Spot Card Received Event JSON Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/a3d266f0be2449a59ccfbc56abbf17c9.js"></script>

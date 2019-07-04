@@ -35,9 +35,34 @@ Specifies mandatory referencing within the Event Message Bundle.
 
 
 
+## Blood Spot Sample Taken event data item mapping to FHIR profiles ##
+
+The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
+
+<table>
+<tr>
+<th>DCH Data Item</th><th>FHIR resource element</th><th>Mandatory/<br/>Required/<br/>Optional</th><th>Note</th>
+</tr>
+<tr>
+<td>Sample Taken Date</td><td>CareConnect-Procedure-1.performedDateTime</td><td>Mandatory</td><td></td>
+</tr>
+<tr>
+<td>ODS Site Code</td><td>CareConnect-Location-1.identifier (ODS Site Code)</td><td>Required</td><td></td>
+</tr>
+<tr>
+<td>Professional Name</td><td>CareConnect-Practitioner-1.name</td><td>Required</td><td></td>
+</tr>
+<tr>
+<td>SDS Job Role Name</td><td>CareConnect-PractitionerRole-1.code (SDS Job Role Name)</td><td>Required</td><td></td>
+</tr>
+<tr>
+<td>Procedure Request Date</td><td>CareConnect-ProcedureRequest-1.authoredOn</td><td>Mandatory</td><td></td>
+</tr>
+</table>
+
 ## Resource Population Requirements and Guidance ##
 
-The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
+The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the data item mapping above and in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
 
 
 ### [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
@@ -176,10 +201,9 @@ The CareConnect-ProcedureRequest-1 resource included as part of the event messag
 | patient | 1..1 | This will reference the patient resource representing the subject of this event |
 
 
-## PDS Change of Address Example ##
-Placeholder for Blood Spot Sample Taken example - like it says, it's CoA
-<script src="https://gist.github.com/IOPS-DEV/828562b2e3edaec1ed43f48645f5376a.js"></script>
+## DCH Blood Spot Sample Taken Example ##
 
+<script src="https://gist.github.com/IOPS-DEV/85c7a66799a3e8002ff9d98ff561432e.js"></script>
 
 ## Profile Change Mappings for Blood Spot Sample Taken ##
 
@@ -201,41 +225,5 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 
 
 <hr/>
-<hr/>
 
-## Blood Spot Sample Taken event data item mapping to FHIR profiles ##
 
-The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
-
-<table>
-<tr>
-<th>DCH Data Item</th><th>FHIR resource element</th><th>Mandatory/<br/>Required/<br/>Optional</th><th>Note</th>
-</tr>
-<tr>
-<td>Date</td><td>CareConnect-DCH-NewbornBloodSpotSampleTaken-Procedure-1.performedDateTime</td><td>Mandatory</td><td></td>
-</tr>
-<tr>
-<td>ODS Site Code</td><td>CareConnect-Location-1.identifier (ODS Site Code)</td><td>Required</td><td></td>
-</tr>
-<tr>
-<td>Professional Name</td><td>CareConnect-DCH-Practitioner-1.name</td><td>Required</td><td></td>
-</tr>
-<tr>
-<td>SDS Job Role Name</td><td>CareConnect-DCH-PractitionerRole-1.code (SDS Job Role Name)</td><td>Required</td><td></td>
-</tr>
-<tr>
-<td>Date</td><td>DCH-NewbornBloodSpotScreening-ProcedureRequest-1.authoredOn</td><td>Mandatory</td><td></td>
-</tr>
-</table>
-
-### Linkage Diagram ###
-
-<img src="images/explore/BloodSpotSampleTaken.png">
-
-### Blood Spot Sample Taken XML Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/495d8e510756d21f29a42d2c022dfb46.js"></script>
-
-### Blood Spot Sample Taken JSON Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/452ebd9647559aa29e280830e35a6d6c.js"></script>

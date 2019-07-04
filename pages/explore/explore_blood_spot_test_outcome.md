@@ -32,9 +32,20 @@ Specifies mandatory referencing within the Event Message Bundle.
 </div>
 
 
+## Blood Spot Test Outcome Event data item mapping to FHIR profiles ##
+
+The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
+
+| DCH Data Item                                            | FHIR resource element             | Mandatory/Required/Optional |
+|----------------------------------------------------------|-----------------------------------|-----------------------------|
+| Date of Blood Test Outcome Received                      | CareConnect-DiagnosticReport-1.issued     | Mandatory                   |
+| Procedure Outcome <br/> for each Procedure                              | CareConnect-Procedure-1.outcome | Mandatory                   |
+| Comment        											| CareConnect-Communication-1   						| Optional                    | 
+
+
 ## Resource Population Requirements and Guidance ##
 
-The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
+The following requirements and resource population guidance should be followed in addition to the requirements and guidance outlined in the data item mapping above and in the [Event Header](https://developer.nhs.uk/apis/ems-beta/explore_event_header_information.html) requirements page.
 
 
 ### [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
@@ -237,10 +248,9 @@ The CareConnect-Communication-1 resource included as part of the event message S
 | Communication.category.coding.code | 1..1 | Fixed Value: 007 |
 | Communication.category.coding.display | 1..1 | Fixed Value: Newborn Blood Spot Screening |
 
-## PDS Change of Address Example ##
-Placeholder Blood Spot Test Outcome example - like it says, it's CoA
-<script src="https://gist.github.com/IOPS-DEV/828562b2e3edaec1ed43f48645f5376a.js"></script>
+## DCH Blood Spot Test Outcome Example ##
 
+<script src="https://gist.github.com/IOPS-DEV/4bb135a9d55f59bbffe54d2301bcbcb6.js"></script>
 
 ## Profile Change Mappings for Blood Spot Test Outcome ##
 
@@ -269,33 +279,4 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 
 
 <hr/>
-<hr/>
-
-## Blood Spot Test Outcome Event data item mapping to FHIR profiles ##
-
-The Child Health Event data items are fulfilled by elements within the FHIR resources listed below.
-
-| DCH Data Item                                            | FHIR resource element             | Mandatory/Required/Optional |
-|----------------------------------------------------------|-----------------------------------|-----------------------------|
-| Date of Blood Test Outcome Received                      | DCH-NewbornBloodSpotScreening-DiagnosticReport-1.issued     | Mandatory                   |
-| Outcome - PHENYLKETONURIA                                | CareConnect-DCH-NewbornBloodSpotScreeningPKU-Procedure-1.outcome | Mandatory                   |
-| Outcome - SICKLE CELL DISEASE                            | CareConnect-DCH-NewbornBloodSpotScreeningSCD-Procedure-1.outcome | Mandatory                   |
-| Outcome - CYSTIC FIBROSIS                                | CareConnect-DCH-NewbornBloodSpotScreeningCF-Procedure-1.outcome | Mandatory                   |
-| Outcome - CONGENITAL HYPOTHYROIDISM                      | CareConnect-DCH-NewbornBloodSpotScreeningCHT-Procedure-1.outcome | Mandatory                   |
-| Outcome - MEDIUM CHAIN ACYL-COA DEHYDROGENASE DEFICIENCY | CareConnect-DCH-NewbornBloodSpotScreeningMCADD-Procedure-1.outcome | Mandatory                   |
-| Outcome - HOMOCYSTINURIA                                 | CareConnect-DCH-NewbornBloodSpotScreeningHCU-Procedure-1.outcome | Mandatory                   |
-| Outcome - MAPLE SYRUP URINE DISEASE                      | CareConnect-DCH-NewbornBloodSpotScreeningMSUD-Procedure-1.outcome | Mandatory                   |
-| Outcome - GLUTARIC ACIDURIA TYPE 1                       | CareConnect-DCH-NewbornBloodSpotScreeningGA1-Procedure-1.outcome | Mandatory                   |
-| Outcome - ISOVALERIC ACIDAEMIA                            | CareConnect-DCH-NewbornBloodSpotScreeningIVA-Procedure-1.outcome | Mandatory                   |
-| Comment        											| DCH-ProfessionalComment-Communication-1   						| Optional                    | 
-
-### Reference Linkage Diagram ###
-
-<img src="images/explore/BloodSpotTestOutcome.png">
-
-### Examples ###
-
-<script src="https://gist.github.com/IOPS-DEV/13bbcd909c9a5e5cae2034e1f27f5854.js"></script>
-
-<script src="https://gist.github.com/IOPS-DEV/9e242c003652cfb3f221117504798327.js"></script>
 
