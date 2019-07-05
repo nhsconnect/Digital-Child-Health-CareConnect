@@ -170,10 +170,6 @@ The CareConnect-Practitioner-1 resource included as part of the event message SH
 
 | Resource Cardinality | TBC |
 
-| Element | Cardinality | Additional Guidance |
-| --- | --- | --- |
-|  |  |  |
-
 
 ### [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 
@@ -204,39 +200,39 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Hips)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 985531000000102 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, hip examination |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+| Procedure.code.coding.code | 1..1 | Fixed Value: 985531000000102 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, hip examination |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Eyes)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 988361000000105 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, eye examination |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+| Procedure.code.coding.code | 1..1 | Fixed Value: 988361000000105 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, eye examination |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Testes)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, testis examination |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+| Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, testis examination |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Heart)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct ||
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, heart examination |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct ||
+| Procedure.code.coding.code | 1..1 | Fixed Value: 988371000000103 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Newborn and Infant Physical Examination Screening Programme, heart examination |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/NIPE-Outcome-1 |
 
 
 ### [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1)

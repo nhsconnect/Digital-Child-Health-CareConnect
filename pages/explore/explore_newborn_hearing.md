@@ -173,10 +173,6 @@ The CareConnect-Practitioner-1 resource included as part of the event message SH
 
 | Resource Cardinality | TBC |
 
-| Element | Cardinality | Additional Guidance |
-| --- | --- | --- |
-|  |  |  |
-
 
 ### [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 
@@ -206,21 +202,21 @@ The CareConnect-Procedure-1 resource included as part of the event message SHALL
 For each of the Procedure resources representing a Test Outcome:
 
 ### CareConnect-Procedure-1 (AABR Hearing Test)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 413083006 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Automated auditory brainstem response test |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+| Procedure.code.coding.code | 1..1 | Fixed Value: 413083006 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Automated auditory brainstem response test |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
 
 
 ### CareConnect-Procedure-1 (AOAE  Hearing Test)
-        | Element | Cardinality | Additional Guidance |
-        | --- | --- | --- |
-        | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
-        | Procedure.code.coding.code | 1..1 | Fixed Value: 446077009 |
-        | Procedure.code.coding.display | 1..1 | Fixed Value: Automated otoacoustic emission test |
-        | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
+| Element | Cardinality | Additional Guidance |
+| --- | --- | --- |
+| Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
+| Procedure.code.coding.code | 1..1 | Fixed Value: 446077009 |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Automated otoacoustic emission test |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
 
 
 ### [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
