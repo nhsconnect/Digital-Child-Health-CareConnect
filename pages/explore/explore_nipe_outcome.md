@@ -200,6 +200,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Hips)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
@@ -209,6 +210,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Eyes)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
@@ -218,6 +220,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Testes)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
@@ -227,6 +230,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (Physical Examination, Heart)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct ||

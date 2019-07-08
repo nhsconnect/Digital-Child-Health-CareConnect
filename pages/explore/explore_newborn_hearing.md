@@ -202,6 +202,7 @@ The CareConnect-Procedure-1 resource included as part of the event message SHALL
 For each of the Procedure resources representing a Test Outcome:
 
 ### CareConnect-Procedure-1 (AABR Hearing Test)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
@@ -211,6 +212,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 
 ### CareConnect-Procedure-1 (AOAE  Hearing Test)
+
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
