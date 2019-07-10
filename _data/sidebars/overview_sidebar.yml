@@ -82,9 +82,9 @@ entries:
 #        - title: Assessment Scales
 #          url: /explore_assessment_scales.html
 #          output: web
-#        - title: Birth Details
-#          url: /explore_birth_details.html
-#          output: web
+        - title: Birth Details
+          url: /explore_birth_details.html
+          output: web
         - title: Blood Spot Sample Taken
           url: /explore_blood_spot_sample_taken.html
           output: web
@@ -116,9 +116,9 @@ entries:
 #        - title: Emergency Care Attendance
 #          url: /explore_emergency_care_attendance.html
 #          output: web
-#        - title: Examination Findings
-#          url: /explore_examination_findings.html
-#          output: web
+        - title: Examination Findings
+          url: /explore_examination_findings.html
+          output: web
       - title: F - L
 #        url: /explore.html
         output: web
@@ -126,15 +126,15 @@ entries:
 #        - title: Family History
 #          url: /explore_family_history.html
 #          output: web
-#        - title: Feeding Status
-#          url: /explore_feeding_status.html
-#          output: web
+        - title: Feeding Status
+          url: /explore_feeding_status.html
+          output: web
 #        - title: Individual Requirements
 #          url: /explore_individual_requirements.html
 #          output: web
-#        - title: Information and Advice Given
-#          url: /explore_information_and_advice_given.html
-#          output: web
+        - title: Information and Advice Given
+          url: /explore_information_and_advice_given.html
+          output: web
 #        - title: Investigation Results
 #          url: /explore_investigation_results.html
 #          output: web 
@@ -148,18 +148,18 @@ entries:
 #        - title: Medication Administration
 #          url: /explore_medication_administration.html
 #          output: web
-#        - title: Medication Statement
-#          url: /explore_medication_statement.html
-#          output: web
+        - title: Medication Statement
+          url: /explore_medication_statement.html
+          output: web
         - title: Newborn Hearing
           url: /explore_newborn_hearing.html
           output: web
         - title: NIPE Outcome
           url: /explore_nipe_outcome.html
           output: web
-#        - title: Observations
-#          url: /explore_observations.html
-#          output: web
+        - title: Observations
+          url: /explore_observations.html
+          output: web
       - title: P - Q
 #        url: /explore.html
         output: web
@@ -173,9 +173,9 @@ entries:
 #        - title: Plan and Requested Actions
 #          url: /explore_plan_and_requested_actions.html
 #          output: web
-#        - title: Problem List
-#          url: /explore_problem_list.html
-#          output: web
+        - title: Problem List
+          url: /explore_problem_list.html
+          output: web
 #        - title: Professional Summary
 #          url: /explore_professional_summary.html
 #          output: web
@@ -198,9 +198,9 @@ entries:
 #        - title: Social Context
 #          url: /explore_social_context.html
 #          output: web
-#        - title: Vaccinations
-#          url: /explore_vaccination_administration.html
-#          output: web
+        - title: Vaccinations
+          url: /explore_vaccination_administration.html
+          output: web
   - title: Additional Content
     output: web
     folderitems:
