@@ -56,9 +56,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Feeding Status Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/69575e294644491509b2c244926e9966.js"></script>
 
 
 ## Profile Change Mappings for Feeding Status ##

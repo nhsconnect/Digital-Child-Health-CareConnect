@@ -68,9 +68,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Birth Details Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/0066a98ca1ead84af8d895c939feea26.js"></script>
 
 
 ## Profile Change Mappings for Birth Details ##

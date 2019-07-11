@@ -59,9 +59,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Problem List Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/8bf9db8846e529fa3cb460981e99af4d.js"></script>
 
 
 ## Profile Change Mappings for Problem List ##
@@ -82,7 +80,6 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 | CareConnect-DCH-Practitioner-1 | CareConnect-Practitioner-1 |
 | CareConnect-DCH-PractitionerRole-1 | CareConnect-PractitionerRole-1 |
 
-#### _insert generated mapping table_ ####
 
 <hr/>
 <hr/>

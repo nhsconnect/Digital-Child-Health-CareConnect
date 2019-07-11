@@ -21,6 +21,12 @@ The following FHIR profiles are used to form the Observations Event Message Bund
 - [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 - [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 - [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+- [CareConnect-BloodPressure-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BloodPressure-Observation-1)
+- [CareConnect-HeartRate-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HeartRate-Observation-1)
+- [CareConnect-BodyTemperature-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BodyTemperature-Observation-1)
+- [CareConnect-RespiratoryRate-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RespiratoryRate-Observation-1)
+- [CareConnect-OxygenSaturation-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-OxygenSaturation-Observation-1)
+
 
 ## Bundle Structure
 
@@ -105,11 +111,11 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 | CareConnect-DCH-Length-Observation-1 | CareConnect-Observation-1 |
 | CareConnect-DCH-HeadCircumference-Observation-1 | CareConnect-Observation-1 |
 | CareConnect-DCH-BMICentile-Observation-1 | CareConnect-Observation-1 |
-| CareConnect-BloodPressure-Observation-1 | CareConnect-Observation-1 |
-| CareConnect-HeartRate-Observation-1 | CareConnect-Observation-1 |
-| CareConnect-BodyTemperature-Observation-1 | CareConnect-Observation-1 |
-| CareConnect-RespiratoryRate-Observation-1 | CareConnect-Observation-1 |
-| CareConnect-OxygenSaturation-Observation-1 | CareConnect-Observation-1 |
+| CareConnect-BloodPressure-Observation-1 | CareConnect-BloodPressure-Observation-1 |
+| CareConnect-HeartRate-Observation-1 | CareConnect-HeartRate-Observation-1 |
+| CareConnect-BodyTemperature-Observation-1 | CareConnect-BodyTemperature-Observation-1 |
+| CareConnect-RespiratoryRate-Observation-1 | CareConnect-RespiratoryRate-Observation-1 |
+| CareConnect-OxygenSaturation-Observation-1 | CareConnect-OxygenSaturation-Observation-1 |
 | CareConnect-DCH-NCMPWithdrawal-Observation-1 | CareConnect-Observation-1 |
 
 

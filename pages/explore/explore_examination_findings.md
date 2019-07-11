@@ -56,9 +56,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Examination Findings Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/805279f5a1bf72dd6f00032aec5b9e2e.js"></script>
 
 
 ## Profile Change Mappings for Examination Findings ##

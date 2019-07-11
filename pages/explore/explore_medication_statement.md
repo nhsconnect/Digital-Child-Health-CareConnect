@@ -111,9 +111,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Medication Statement Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/3524210a5860ee48919e82f87986a0f7.js"></script>
 
 
 ## Profile Change Mappings for Medication Statement ##

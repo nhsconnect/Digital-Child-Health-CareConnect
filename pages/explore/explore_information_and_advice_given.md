@@ -58,9 +58,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Information and Advice Given Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/1fa688a8ba12e306a91b919683523b16.js"></script>
 
 
 ## Profile Change Mappings for Information and Advice Given ##

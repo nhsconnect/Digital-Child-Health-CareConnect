@@ -67,9 +67,7 @@ The following requirements and resource population guidance should be followed i
 
 ## Vaccinations Example ##
 
-#### _placeholder using additional demographics_ ####
-
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/e9631f36c9a6585f00c78464a6defc0a.js"></script>
 
 
 ## Profile Change Mappings for Vaccinations ##
