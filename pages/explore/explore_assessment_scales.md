@@ -12,7 +12,7 @@ summary: "The FHIR profiles used for the Assessment Scales Event Message Bundle"
 The following FHIR profiles are used to form the Assessment Scales Event Message Bundle:
 
 - [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
-- [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) - where the coding and display elements for the ‘event’ type are fixed to "​assessment-scales-1 | Assessment Scales"
+- [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) - where the coding and display elements for the ‘event’ type are fixed to "​assessment-scales-1 \| Assessment Scales"
 - [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
 - [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1)
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)

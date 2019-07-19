@@ -13,7 +13,7 @@ The following FHIR profiles are used to form the Legal Information Event Message
 
 - [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
 - [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1)
-- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) - where the coding and display elements for the ‘event’ type are fixed to "​legal-information-1 | Legal Information"
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) - where the coding and display elements for the ‘event’ type are fixed to "​legal-information-1 \| Legal Information"
 - [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1)
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)

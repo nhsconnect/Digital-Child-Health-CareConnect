@@ -12,7 +12,7 @@ summary: "The FHIR profiles used for the Family History Event Message Bundle"
 The following FHIR profiles are used to form the Family History Event Message Bundle:
 
 - [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle)
-- [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) - where the coding and display for the event element is fixed to "​family-history-1 | ​Family History"
+- [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) - where the coding and display for the event element is fixed to "​family-history-1 \| ​Family History"
 - [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
 - [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1)
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
