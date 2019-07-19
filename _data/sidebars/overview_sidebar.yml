@@ -79,9 +79,9 @@ entries:
 #        - title: Allergies and Adverse Reactions
 #          url: /explore_allergies_and_adverse_reactions.html
 #          output: web
-#        - title: Assessment Scales
-#          url: /explore_assessment_scales.html
-#          output: web
+        - title: Assessment Scales
+          url: /explore_assessment_scales.html
+          output: web
         - title: Birth Details
           url: /explore_birth_details.html
           output: web
@@ -101,9 +101,9 @@ entries:
 #        - title: Clinical Risk Factors
 #          url: /explore_clinical_risk_factors.html
 #          output: web
-#        - title: Developmental Skills
-#          url: /explore_developmental_skills.html
-#          output: web
+        - title: Developmental Skills
+          url: /explore_developmental_skills.html
+          output: web
 #        - title: Discharge Details
 #          url: /explore_discharge_details.html
 #          output: web
@@ -123,9 +123,9 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Family History
-#          url: /explore_family_history.html
-#          output: web
+        - title: Family History
+          url: /explore_family_history.html
+          output: web
         - title: Feeding Status
           url: /explore_feeding_status.html
           output: web
@@ -138,16 +138,16 @@ entries:
 #        - title: Investigation Results
 #          url: /explore_investigation_results.html
 #          output: web 
-#        - title: Legal Information
-#          url: /explore_legal_information.html
-#          output: web
+        - title: Legal Information
+          url: /explore_legal_information.html
+          output: web
       - title: M - O
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Medication Administration
-#          url: /explore_medication_administration.html
-#          output: web
+        - title: Medication Administration
+          url: /explore_medication_administration.html
+          output: web
         - title: Medication Statement
           url: /explore_medication_statement.html
           output: web
@@ -189,9 +189,9 @@ entries:
 #        - title: Referral
 #          url: /explore_referral.html
 #          output: web
-#        - title: Safety Alerts
-#          url: /explore_safety_alerts.html
-#          output: web
+        - title: Safety Alerts
+          url: /explore_safety_alerts.html
+          output: web
 #        - title: Social Context Household
 #          url: /explore_social_context_household.html
 #          output: web
