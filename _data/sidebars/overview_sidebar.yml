@@ -176,12 +176,12 @@ entries:
         - title: Problem List
           url: /explore_problem_list.html
           output: web
-#        - title: Professional Summary
-#          url: /explore_professional_summary.html
-#          output: web
-#        - title: Professional Contacts
-#          url: /explore_professional_contacts.html
-#          output: web
+        - title: Professional Contacts
+          url: /explore_professional_contacts.html
+          output: web
+        - title: Professional Summary
+          url: /explore_professional_summary.html
+          output: web
       - title: R - Z
 #        url: /explore.html
         output: web
@@ -192,9 +192,9 @@ entries:
         - title: Safety Alerts
           url: /explore_safety_alerts.html
           output: web
-#        - title: Social Context Household
-#          url: /explore_social_context_household.html
-#          output: web
+        - title: Social Context Household
+          url: /explore_social_context_household.html
+          output: web
 #        - title: Social Context
 #          url: /explore_social_context.html
 #          output: web
