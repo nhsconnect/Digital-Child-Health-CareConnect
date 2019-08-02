@@ -73,12 +73,12 @@ entries:
         - title: Additional Demographics
           url: /explore_additional_demographics.html
           output: web
-#        - title: Admission Details
-#          url: /explore_admission_details.html
-#          output: web
-#        - title: Allergies and Adverse Reactions
-#          url: /explore_allergies_and_adverse_reactions.html
-#          output: web
+        - title: Admission Details
+          url: /explore_admission_details.html
+          output: web
+        - title: Allergies and Adverse Reactions
+          url: /explore_allergies_and_adverse_reactions.html
+          output: web
         - title: Assessment Scales
           url: /explore_assessment_scales.html
           output: web
@@ -98,9 +98,9 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Clinical Risk Factors
-#          url: /explore_clinical_risk_factors.html
-#          output: web
+        - title: Clinical Risk Factors
+          url: /explore_clinical_risk_factors.html
+          output: web
         - title: Developmental Skills
           url: /explore_developmental_skills.html
           output: web
