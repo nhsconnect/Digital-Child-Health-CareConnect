@@ -104,18 +104,18 @@ entries:
         - title: Developmental Skills
           url: /explore_developmental_skills.html
           output: web
-#        - title: Discharge Details
-#          url: /explore_discharge_details.html
-#          output: web
-#        - title: Early Years Progress
-#          url: /explore_early_years_progress.html
-#          output: web
+        - title: Discharge Details
+          url: /explore_discharge_details.html
+          output: web
+        - title: Early Years Progress
+          url: /explore_early_years_progress.html
+          output: web
 #        - title: Educational History
 #          url: /explore_educational_history.html
 #          output: web
-#        - title: Emergency Care Attendance
-#          url: /explore_emergency_care_attendance.html
-#          output: web
+        - title: Emergency Care Attendance
+          url: /explore_emergency_care_attendance.html
+          output: web
         - title: Examination Findings
           url: /explore_examination_findings.html
           output: web
@@ -129,9 +129,9 @@ entries:
         - title: Feeding Status
           url: /explore_feeding_status.html
           output: web
-#        - title: Individual Requirements
-#          url: /explore_individual_requirements.html
-#          output: web
+        - title: Individual Requirements
+          url: /explore_individual_requirements.html
+          output: web
         - title: Information and Advice Given
           url: /explore_information_and_advice_given.html
           output: web
