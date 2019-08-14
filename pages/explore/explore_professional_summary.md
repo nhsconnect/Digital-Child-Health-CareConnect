@@ -180,6 +180,10 @@ The CareConnect-Communication-1 resource included as part of the event message S
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
+| subject | 1..1 | This will reference the patient resource representing the subject of this event |
+| recipient | 1..1 | This will reference the related person resource representing the recipient of this event |
+| context | 1..1 | This will reference the encounter resource representing the context of this event |
+| sender | 1..1 | This will reference the practitioner resource representing the source of this event |
 | Communication.reasonCode | 0..1 | Communication.reasonCode SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-InformationOrAdviceGiven-1 |
 
 

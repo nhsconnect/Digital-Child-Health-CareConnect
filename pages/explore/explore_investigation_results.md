@@ -27,8 +27,6 @@ The following FHIR profiles are used to form the Investigation Results Event Mes
 
 Specifies referencing within the Event Message Bundle.
 
-#### _placeholder using additional demographics ####
-
 <div style="text-align:center; margin-bottom:20px" >
 	<a href="images/explore/dch-investigationresults.png" target="_blank"><img src="images/explore/dch-investigationresults.png"></a><br/>
 	Investigation Results <a href="images/explore/dch-investigationresults.png" target="_blank">(open in new TAB)</a>

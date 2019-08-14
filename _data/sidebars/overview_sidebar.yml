@@ -110,9 +110,9 @@ entries:
         - title: Early Years Progress
           url: /explore_early_years_progress.html
           output: web
-#        - title: Educational History
-#          url: /explore_educational_history.html
-#          output: web
+        - title: Educational History
+          url: /explore_educational_history.html
+          output: web
         - title: Emergency Care Attendance
           url: /explore_emergency_care_attendance.html
           output: web
@@ -135,9 +135,9 @@ entries:
         - title: Information and Advice Given
           url: /explore_information_and_advice_given.html
           output: web
-#        - title: Investigation Results
-#          url: /explore_investigation_results.html
-#          output: web 
+        - title: Investigation Results
+          url: /explore_investigation_results.html
+          output: web 
         - title: Legal Information
           url: /explore_legal_information.html
           output: web
@@ -164,15 +164,15 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Parent Guardian or Personal Comment
-#          url: /explore_parent_guardian_or_personal_comment.html
-#          output: web
-#        - title: Personal Contacts
-#          url: /explore_personal_contacts.html
-#          output: web
-#        - title: Plan and Requested Actions
-#          url: /explore_plan_and_requested_actions.html
-#          output: web
+        - title: Parent Guardian or Personal Comment
+          url: /explore_parent_guardian_or_personal_comment.html
+          output: web
+        - title: Personal Contacts
+          url: /explore_personal_contacts.html
+          output: web
+        - title: Plan and Requested Actions
+          url: /explore_plan_and_requested_actions.html
+          output: web
         - title: Problem List
           url: /explore_problem_list.html
           output: web
@@ -186,18 +186,18 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
-#        - title: Referral
-#          url: /explore_referral.html
-#          output: web
+        - title: Referral
+          url: /explore_referral.html
+          output: web
         - title: Safety Alerts
           url: /explore_safety_alerts.html
           output: web
         - title: Social Context Household
           url: /explore_social_context_household.html
           output: web
-#        - title: Social Context
-#          url: /explore_social_context.html
-#          output: web
+        - title: Social Context
+          url: /explore_social_context.html
+          output: web
         - title: Vaccinations
           url: /explore_vaccination_administration.html
           output: web
