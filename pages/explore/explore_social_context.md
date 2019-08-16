@@ -71,7 +71,7 @@ The Event-MessageHeader-1 resource included as part of the event message SHALL c
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | extension(messageEventType) | 1..1 |  |
-| event | 1..1 | Fixed Value: "​developmental-skills-1 \| ​Developmental Skills" |
+| event | 1..1 | Fixed Value: ‘social-context-1 \| Social Context’ |
 | responsible | 1..1 | This will reference the responsible Organization resource |
 | focus | 1..1 | This will reference the CareConnect-Encounter-1 resource which contains information relating to the event message. |
 
@@ -141,7 +141,7 @@ The CareConnect-Location-1 resource included as part of the event message SHALL 
 
 The CareConnect-QuestionnaireResponse-1 resource included as part of the event message SHALL conform to the [CareConnect-QuestionnaireResponse-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -151,13 +151,70 @@ The CareConnect-QuestionnaireResponse-1 resource included as part of the event m
 
 Individual Social Context items will be recorded as:
 
-#### itemName ####
 
-| item (itemName)           | 0..1 | |
-| item.linkId                            | 1..1 | Fixed Value:  |
-| item.text                              | 1..1 | Fixed Value:  |
+#### Social Circumstances
+
+| item (socialCircumstances)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: socialCircumstances |
+| item.text                              | 1..1 | Fixed Value: Social Circumstances |
 | item.answer                            | 1..1 | |
-| item.answer.valueCoding                | 1..1 | item.answer.valueCoding SHALL take a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-EducationLevel-1 |
+| item.answer.valueString                | 1..1 | |
+
+#### Lifestyle
+
+| item (lifestyle)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: lifestyle |
+| item.text                              | 1..1 | Fixed Value: Lifestyle |
+| item.answer                            | 1..1 | |
+| item.answer.valueString                | 1..1 | |
+
+#### Smoking Status
+
+| item (smokingStatus)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: smokingStatus |
+| item.text                              | 1..1 | Fixed Value: Smoking Status |
+| item.answer                            | 1..1 | |
+| item.answer.valueCoding                | 1..1 | item.answer.valueCoding SHOULD take a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-PersonSmokingStatus-1 |
+
+#### Smoking Status - Details
+
+| item (smokingStatusDetails)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: smokingStatusDetails |
+| item.text                              | 1..1 | Fixed Value: Smoking Status - Details |
+| item.answer                            | 1..1 | |
+| item.answer.valueString                | 1..1 | |
+
+#### Drug/substance Use
+
+| item (drugSubstanceUse)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: drugSubstanceUse |
+| item.text                              | 1..1 | Fixed Value: Drug/substance Use |
+| item.answer                            | 1..1 | |
+| item.answer.valueCoding                | 1..1 | item.answer.valueCoding SHALL take a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-DrugOrSubstanceUse-1 |
+
+#### Drug/substance use - Details
+
+| item (drugSubstanceUseDetails)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: drugSubstanceUseDetails |
+| item.text                              | 1..1 | Fixed Value: Drug/substance use - Details |
+| item.answer                            | 1..1 | |
+| item.answer.valueString                | 1..1 | |
+
+#### Alcohol use
+
+| item (alcoholUse)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: alcoholUse |
+| item.text                              | 1..1 | Fixed Value: Alcohol use |
+| item.answer                            | 1..1 | |
+| item.answer.valueCoding                | 1..1 | item.answer.valueCoding SHALL take a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AlcoholUse-1 |
+
+#### Alcohol use - Details
+
+| item (alcoholUseDetails)           | 0..1 | |
+| item.linkId                            | 1..1 | Fixed Value: alcoholUseDetails |
+| item.text                              | 1..1 | Fixed Value: Alcohol use - Details |
+| item.answer                            | 1..1 | |
+| item.answer.valueString                | 1..1 | |
 
 
 ## Social Context Example ##
@@ -180,54 +237,3 @@ Profiles used in [Demographics Update Event Messages 1.2.1-Release Candidate](ht
 | CareConnect-Location-1 | CareConnect-Location-1 |
 | DCH-SocialContextPerson-QuestionnaireResponse-1 | CareConnect-QuestionnaireResponse-1 |
 
-<hr/>
-<hr/>
-
-## Old Stuff ##
-
-#### retain until new content completed then remove ####
-
-
-The following FHIR profiles are used to form the Social Context Event Message Bundle:
-
-- [DCH-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-Bundle-1)
-- [DCH-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-MessageHeader-1) - where the coding and display for the event element is fixed to 'CH031 - Social Context'
-- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
-- [DCH-HealthcareService-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-HealthcareService-1)
-- [CareConnect-DCH-Patient-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Patient-1)
-- [CareConnect-DCH-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Encounter-1)
-- [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
-- [DCH-SocialContextPerson-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-SocialContextPerson-QuestionnaireResponse-1)
-
-### Social Context Event data item mapping to FHIR profiles ###
-
-This Mapping table defines the FHIR elements that SHALL be used to encode the Healthy Child Event Specification data items for each DCH Event Message payload.  
-Some common data item mappings, such as patient, publisher or Date/Time of event information, are defined within the [Header mapping table](explore_event_header_design.html) and SHALL be considered in parallel with the payload mapping.
-
-The Child Health Event data items are fulfilled by elements within the FHIR resources listed below:
-                                                                                                   
-| DCH Data Item        | FHIR Resource element                                                       | Mandatory/<br/>Required/<br/>Optional  | Note                                     |
-|----------------------|-----------------------------------------------------------------------------|----------------------------------------|------------------------------------------|
-| Date/Time            | CareConnect-DCH-Encounter-1.period.start                                    | Mandatory                              | Format is YYYY-MM-DD”T”HH:MM:SS.         |
-| Social Circumstances | DCH-SocialContextPerson-QuestionnaireResponse-1.item.socialCircumstances    | Required                               | Free text.                               |
-| Lifestyle            | DCH-SocialContextPerson-QuestionnaireResponse-1.item.lifestyle              | Required                               | Free text.                               |
-| Smoking Status       | DCH-SocialContextPerson-QuestionnaireResponse-1.item.smokingStatus          | Required                               | Allow SNOMED CT only.                  |
-| Smoking Status- details| DCH-SocialContextPerson-QuestionnaireResponse-1.item:smokingStatusDetails | Optional                               | Free text.                               |
-| Drug/substance use   | DCH-SocialContextPerson-QuestionnaireResponse-1.item:substanceStatus        | Required                               | Allow SNOMED CT only.                  |
-| Drug/substance use - details   | DCH-SocialContextPerson-QuestionnaireResponse-11.item:alcoholUseDetails     | Optional                     | Free text.                               |
-| Alcohol intake       | DCH-SocialContextPerson-QuestionnaireResponse-1.item:alchoholIntake         | Required                               | Allow SNOMED CT only.                  |
-| Alcohol use - details | DCH-SocialContextPerson-QuestionnaireResponse-1.item:alcoholUseDetails     | Optional                               | Free text.                               |
-
-### Reference Linkage Diagram ###
-
-This Linkage diagram defines the required references that SHALL be made between resources within the DCH Event Message bundle. It includes both Header and Payload resources (but omits the DCH-Bundle-1 wrapper).
-
-<img src="images/explore/SocialContext.png">
-
-### Clinical Risk Factors XML Bundle Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/e1edec8139df6ee2147e2536f374b2a0.js"></script>
-
-### Clinical Risk Factors JSON Bundle Example ###
-
-<script src="https://gist.github.com/IOPS-DEV/828d20aeb19618cecf3b1bf550bc36e6.js"></script>
