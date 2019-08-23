@@ -39,14 +39,14 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | DCH Data Item        | FHIR Resource element                                                       | Mandatory/<br/>Required/<br/>Optional  | Note                                     |
 |----------------------|-----------------------------------------------------------------------------|----------------------------------------|------------------------------------------|
 | Date/Time            | CareConnect-Encounter-1.period.start                                    | Mandatory                              | Format is YYYY-MM-DD”T”HH:MM:SS.         |
-| Social Circumstances | CareConnect-QuestionnaireResponse-1.item.socialCircumstances    | Required                               | Free text.                               |
-| Lifestyle            | CareConnect-QuestionnaireResponse-1.item.lifestyle              | Required                               | Free text.                               |
-| Smoking Status       | CareConnect-QuestionnaireResponse-1.item.smokingStatus          | Required                               | Allow SNOMED CT only.                  |
-| Smoking Status- details| CareConnect-QuestionnaireResponse-1.item:smokingStatusDetails | Optional                               | Free text.                               |
-| Drug/substance use   | CareConnect-QuestionnaireResponse-1.item:substanceStatus        | Required                               | Allow SNOMED CT only.                  |
-| Drug/substance use - details   | CareConnect-QuestionnaireResponse-11.item:alcoholUseDetails     | Optional                     | Free text.                               |
-| Alcohol intake       | CareConnect-QuestionnaireResponse-1.item:alchoholIntake         | Required                               | Allow SNOMED CT only.                  |
-| Alcohol use - details | CareConnect-QuestionnaireResponse-1.item:alcoholUseDetails     | Optional                               | Free text.                               |
+| Social Circumstances | CareConnect-QuestionnaireResponse-1.item(socialCircumstances)    | Required                               | Free text.                               |
+| Lifestyle            | CareConnect-QuestionnaireResponse-1.item(lifestyle)              | Required                               | Free text.                               |
+| Smoking Status       | CareConnect-QuestionnaireResponse-1.item(smokingStatus)          | Required                               | Allow SNOMED CT only.                  |
+| Smoking Status- details| CareConnect-QuestionnaireResponse-1.item(smokingStatusDetails) | Optional                               | Free text.                               |
+| Drug/substance use   | CareConnect-QuestionnaireResponse-1.item(substanceStatus)        | Required                               | Allow SNOMED CT only.                  |
+| Drug/substance use - details   | CareConnect-QuestionnaireResponse-1.item(alcoholUseDetails)     | Optional                     | Free text.                               |
+| Alcohol intake       | CareConnect-QuestionnaireResponse-1.item(alchoholIntake)         | Required                               | Allow SNOMED CT only.                  |
+| Alcohol use - details | CareConnect-QuestionnaireResponse-1.item(alcoholUseDetails)     | Optional                               | Free text.                               |
 
 
 ## Resource Population Requirements and Guidance ##

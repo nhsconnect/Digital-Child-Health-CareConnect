@@ -43,14 +43,14 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | DCH Data Item                                | FHIR Resource element                                                             | Mandatory/Required/Optional |             |
 |----------------------------------------------|-----------------------------------------------------------------------------------|-----------------------------|-------------|
 | Date/Time                                    | CareConnect-Encounter-1.period.start                                          | Mandatory                   |             |
-| Educational Establishment                    | CareConnect-QuestionnaireResponse-1.item.educationalEstablishment      | Mandatory                   |             |
+| Educational Establishment                    | CareConnect-QuestionnaireResponse-1.item(educationalEstablishment)      | Mandatory                   |             |
 | Educational Establishment Name               | CareConnect-Organization-1.name                                                   | Mandatory                   |             |
 | Educational Establishment ODS/ORD Site Code  | CareConnect-Organization-1.identifier                                             | Mandatory                   |             |
-| Type of Educational Establishment  | CareConnect-QuestionnaireResponse-1.item.educationalEstablishmentType            | Mandatory                   |             |
-| Year From                          | CareConnect-QuestionnaireResponse-1.item.educationalEstablishmentStart           | Mandatory                   | Only the Year part of the date is required  |
-| Year To                            | CareConnect-QuestionnaireResponse-1.item.educationalEstablishmentEnd             | Mandatory                   | Only the Year part of the date is required  |
-| Educational Assessment             | CareConnect-QuestionnaireResponse-1.item.educationalAssessmentOutcome            | Required                    |             |
-| Type of Special Educational Need   | CareConnect-QuestionnaireResponse-1.item.specialEducationalNeedType              | Required                    |             |
+| Type of Educational Establishment  | CareConnect-QuestionnaireResponse-1.item(educationalEstablishmentType)            | Mandatory                   |             |
+| Year From                          | CareConnect-QuestionnaireResponse-1.item(educationalEstablishmentStart)           | Mandatory                   | Only the Year part of the date is required  |
+| Year To                            | CareConnect-QuestionnaireResponse-1.item(educationalEstablishmentEnd)             | Mandatory                   | Only the Year part of the date is required  |
+| Educational Assessment             | CareConnect-QuestionnaireResponse-1.item(educationalAssessmentOutcome)            | Required                    |             |
+| Type of Special Educational Need   | CareConnect-QuestionnaireResponse-1.item(specialEducationalNeedType)              | Required                    |             |
 | Special Educational Need Comment   | CareConnect-Communication-1                                                     | Optional                    |             |
 
 ## Resource Population Requirements and Guidance ##

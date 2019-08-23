@@ -39,13 +39,14 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | DCH Data Item            | FHIR resource element                                 | Mandatory/Required/Optional |
 |--------------------------|-------------------------------------------------------|-----------------------------|
 | Date                                         | CareConnect-Encounter-1.period.start or DCH-FeedingStatus-QuestionnaireResponse-1.authored | Mandatory                   |
-| First Milk Feed                              | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Date and Time of First Milk Feed             | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Feeding Status of the baby                   | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Feeding method                               | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Introduction of Solids                       | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Approximate Date breastfeeding stopped       | CareConnect-QuestionnaireResponse-1.item        | Required                    |
-| Feeding Concerns                             | CareConnect-QuestionnaireResponse-1.item        | Optional                    |
+| First Milk Feed                              | CareConnect-QuestionnaireResponse-1.item(firstMilkFeed)        | Required                    |
+| Date and Time of First Milk Feed             | CareConnect-QuestionnaireResponse-1.item(firstMilkFeedDateTime)        | Required                    |
+| Feeding Status of the baby                   | CareConnect-QuestionnaireResponse-1.item(feedingStatus)        | Required                    |
+| Feeding method                               | CareConnect-QuestionnaireResponse-1.item(feedingMethod)        | Required                    |
+| Introduction of Solids                       | CareConnect-QuestionnaireResponse-1.item(introductionOfSolids)        | Required                    |
+| Approximate Date breastfeeding stopped       | CareConnect-QuestionnaireResponse-1.item(approximateDateBreastfeedingStopped)        | Required                    |
+| Feeding Concerns                             | CareConnect-QuestionnaireResponse-1.item(feedingConcerns)        | Optional                    |
+
 
 
 ## Resource Population Requirements and Guidance ##
@@ -146,42 +147,65 @@ The CareConnect-QuestionnaireResponse-1 resource included as part of the event m
 | QuestionnaireResponse.subject | 1..1 | QuestionnaireResponse.subject SHALL reference the subject Patient resource |
 | QuestionnaireResponse.context | 1..1 | QuestionnaireResponse.context SHALL reference the Encounter resource |
 | QuestionnaireResponse.author | 1..1 | QuestionnaireResponse.author SHALL reference the authoring Practitioner resource |
+
+Individual Feeding Status items will be recorded as:
+
+#### First Milk Feed
+
 | item (firstMilkFeed) |
 | QuestionnaireResponse.item (firstMilkFeed) | 0..1 | |
 | QuestionnaireResponse.item (firstMilkFeed).linkId | 1..1 | Fixed Value: firstMilkFeed |
 | QuestionnaireResponse.item (firstMilkFeed).text | 1..1 | Fixed Value: First Milk Feed |
 | QuestionnaireResponse.item (firstMilkFeed).answer | 1..1 | |
 | QuestionnaireResponse.item (firstMilkFeed).answer.valueCoding | 1..1 | QuestionnaireResponse.item (firstMilkFeed).answer.valueCoding SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-FirstMilkFeed-1 |
+
+#### Date and Time of First Milk Feed
+
 | item (firstMilkFeedDateTime) |
 | QuestionnaireResponse.item (firstMilkFeedDateTime) | 0..1 | |
 | QuestionnaireResponse.item (firstMilkFeedDateTime).linkId | 1..1 | Fixed Value: firstMilkFeedDateTime |
 | QuestionnaireResponse.item (firstMilkFeedDateTime).text | 1..1 | Fixed Value: Date and Time of First Milk Feed |
 | QuestionnaireResponse.item (firstMilkFeedDateTime).answer | 1..1 | |
 | QuestionnaireResponse.item (firstMilkFeedDateTime).answer.valueDateTime | 1..1 | |
+
+#### Feeding Status of the baby
+
 | item (feedingStatus) |
 | QuestionnaireResponse.item (feedingStatus) | 0..1 | |
 | QuestionnaireResponse.item (feedingStatus).linkId | 1..1 | Fixed Value: feedingStatus |
 | QuestionnaireResponse.item (feedingStatus).text | 1..1 | Fixed Value: Feeding Status of the baby |
 | QuestionnaireResponse.item (feedingStatus).answer | 1..1 | |
 | QuestionnaireResponse.item (feedingStatus).answer.valueCoding | 1..1 | QuestionnaireResponse.item (feedingStatus).answer.valueCoding SHALL use a value from ttps://fhir.nhs.uk/STU3/ValueSet/DCH-FeedingStatus-1 |
+
+#### Feeding method
+
 | item (feedingMethod) |
 | QuestionnaireResponse.item (feedingMethod) | 0..1 | |
 | QuestionnaireResponse.item (feedingMethod).linkId | 1..1 | Fixed Value: feedingMethod |
 | QuestionnaireResponse.item (feedingMethod).text | 1..1 | Fixed Value: Feeding Method |
 | QuestionnaireResponse.item (feedingMethod).answer | 1..1 | |
 | QuestionnaireResponse.item (feedingMethod).answer.valueCoding | 1..1 | QuestionnaireResponse.item (feedingMethod).answer.valueCoding SHOULD use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-FeedingMethod-1 |
+
+#### Introduction of Solids
+
 | item (introductionOfSolids) |
 | QuestionnaireResponse.item (introductionOfSolids) | 0..1 | |
 | QuestionnaireResponse.item (introductionOfSolids).linkId | 1..1 | Fixed Value: introductionOfSolids |
 | QuestionnaireResponse.item (introductionOfSolids).text | 1..1 | Fixed Value: Introduction of Solids |
 | QuestionnaireResponse.item (introductionOfSolids).answer | 1..1 | |
 | QuestionnaireResponse.item (introductionOfSolids).answer.valueDateTime | 1..1 | |
+
+#### Approximate Date breastfeeding stopped
+
 | item (approximateDateBreastfeedingStopped) |
 | QuestionnaireResponse.item (approximateDateBreastfeedingStopped) | 0..1 | |
 | QuestionnaireResponse.item (approximateDateBreastfeedingStopped).linkId | 1..1 | Fixed Value: approximateDateBreastfeedingStopped |
 | QuestionnaireResponse.item (approximateDateBreastfeedingStopped).text | 1..1 | Fixed Value: Date of last breast milk feed to the nearest month and year |
 | QuestionnaireResponse.item (approximateDateBreastfeedingStopped).answer | 1..1 | |
 | QuestionnaireResponse.item (approximateDateBreastfeedingStopped).answer.valueDateTime | 1..1 | |
+
+#### Feeding Concerns
+
 | item (feedingConcerns) |
 | QuestionnaireResponse.item (feedingConcerns) | 0..1 | |
 | QuestionnaireResponse.item (feedingConcerns).linkId | 1..1 | Fixed Value: feedingConcerns |

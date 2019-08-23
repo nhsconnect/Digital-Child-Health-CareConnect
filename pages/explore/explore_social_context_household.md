@@ -40,19 +40,19 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | DCH Data Item                                        | FHIR Resource element                                                                  | Mandatory/<br/>Required/<br/>Optional  |  Note                           |
 |------------------------------------------------------|----------------------------------------------------------------------------------------|----------------------------------------|---------------------------------|
 | Date/Time                                            | CareConnect-Encounter-1.period.start                                               | Mandatory                              | Format is YYYY-MM-DD”T”HH:MM:SS |
-| Mothers Education Level                              | CareConnect-QuestionnaireResponse-1.item:mothersEducationLevel          | Required                               | Free text                       |
-| Smoking status within the house                      | CareConnect-QuestionnaireResponse-1.item:householdSmokingStatus         | Required                               | Allow SNOMED CT only            |
-| Smoking Status- details                              | CareConnect-QuestionnaireResponse-1.item:householdSmokingStatus.answer.extension:smokingStatusDetails         | Required                               | Free text            |
-| Substance misuse status within household             | CareConnect-QuestionnaireResponse-1.item:householdSubstanceStatus       | Required                               | Allow SNOMED CT only            |
-| Drug/substance use - details                         | CareConnect-QuestionnaireResponse-1.item:householdSubstanceStatus.answer.extension:substanceStatusDetails         | Required                               | Free text            |
-| Alcohol Use within households                        | CareConnect-QuestionnaireResponse-1.item:householdAlcoholDrinkingStatus | Required                               |Allow SNOMED CT only             |
-| Alcohol use - details                                | CareConnect-QuestionnaireResponse-1.item:householdAlcoholDrinkingStatus.answer.extension:alcoholStatusDetails | Required                               | Free text            |
-| Employment status  (care giver 1)                    | CareConnect-QuestionnaireResponse-1.item:employmentStatusCareGiver1     | Required                               |                                 |
-| Care giver 1's occupation                            | CareConnect-QuestionnaireResponse-1.item:occupationCareGiver1           | Required                               | Free text field to be used if no coded text available                                |
-| Employment status (care giver 2)                     | CareConnect-QuestionnaireResponse-1.item:employmentStatusCareGiver2     | Required                               |                                 |
-| Care giver 2's occupation                            | CareConnect-QuestionnaireResponse-1.item:occupationCareGiver2           | Required                               | Free text field to be used if no coded text available                                |
-| Any Household member has/had social services support | CareConnect-QuestionnaireResponse-1.item:socialServicesSupport          | Required                               | Boolean                         |
-| Accommodation status                                 | CareConnect-QuestionnaireResponse-1.item:accommodationStatus            | Mandatory                              |                                 |
+| Mothers Education Level                              | CareConnect-QuestionnaireResponse-1.item(mothersEducationLevel)          | Required                               | Free text                       |
+| Smoking status within the house                      | CareConnect-QuestionnaireResponse-1.item(householdSmokingStatus)         | Required                               | Allow SNOMED CT only            |
+| Smoking Status- details                              | CareConnect-QuestionnaireResponse-1.item(householdSmokingStatus).answer.extension:smokingStatusDetails         | Required                               | Free text            |
+| Substance misuse status within household             | CareConnect-QuestionnaireResponse-1.item(householdSubstanceStatus)       | Required                               | Allow SNOMED CT only            |
+| Drug/substance use - details                         | CareConnect-QuestionnaireResponse-1.item(householdSubstanceStatus).answer.extension:substanceStatusDetails         | Required                               | Free text            |
+| Alcohol Use within households                        | CareConnect-QuestionnaireResponse-1.item(householdAlcoholDrinkingStatus) | Required                               |Allow SNOMED CT only             |
+| Alcohol use - details                                | CareConnect-QuestionnaireResponse-1.item(householdAlcoholDrinkingStatus).answer.extension:alcoholStatusDetails | Required                               | Free text            |
+| Employment status  (care giver 1)                    | CareConnect-QuestionnaireResponse-1.item(employmentStatusCareGiver1)     | Required                               |                                 |
+| Care giver 1's occupation                            | CareConnect-QuestionnaireResponse-1.item(occupationCareGiver1)           | Required                               | Free text field to be used if no coded text available                                |
+| Employment status (care giver 2)                     | CareConnect-QuestionnaireResponse-1.item(employmentStatusCareGiver2)     | Required                               |                                 |
+| Care giver 2's occupation                            | CareConnect-QuestionnaireResponse-1.item(occupationCareGiver2)           | Required                               | Free text field to be used if no coded text available                                |
+| Any Household member has/had social services support | CareConnect-QuestionnaireResponse-1.item(socialServicesSupport)          | Required                               | Boolean                         |
+| Accommodation status                                 | CareConnect-QuestionnaireResponse-1.item(accommodationStatus)            | Mandatory                              |                                 |
 
 ## Resource Population Requirements and Guidance ##
 

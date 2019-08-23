@@ -45,12 +45,12 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | Site Code                                  | CareConnect-Location-1.identifier                                   | Required                    |
 | Performing Professional                    | CareConnect-Practitioner.name                                   | Required                    |
 | Professional Type                          | CareConnect-PractitionerRole-1.code (SDS Job Role Name)         | Required                    |
-| Parental Consent                           | CareConnect-QuestionnaireResponse-1.parentalConsent                        | Required                    |
-| Communication and Language                 | CareConnect-QuestionnaireResponse-1.communicationAndLanguage                    | Required                    |
-| Physical Development                       | CareConnect-QuestionnaireResponse-1.physicalDevelopment                    | Required                    |
-| Personal, Social and Emotional Development | CareConnect-QuestionnaireResponse-1.personalSocialEmotionalDevelopment                    | Required                    |
-| Any Areas of Concern                       | CareConnect-QuestionnaireResponse-1.areasOfConcern                    | Required                    |
-| Type of Support Requested/Provided         | CareConnect-QuestionnaireResponse-1.supportedRequestedOrProvided                    | Required                    |
+| Parental Consent                           | CareConnect-QuestionnaireResponse-1.item(parentalConsent)                        | Required                    |
+| Communication and Language                 | CareConnect-QuestionnaireResponse-1.item(communicationAndLanguage)                    | Required                    |
+| Physical Development                       | CareConnect-QuestionnaireResponse-1.item(physicalDevelopment)                    | Required                    |
+| Personal, Social and Emotional Development | CareConnect-QuestionnaireResponse-1.item(personalSocialEmotionalDevelopment)                    | Required                    |
+| Any Areas of Concern                       | CareConnect-QuestionnaireResponse-1.item(areasOfConcern)                    | Required                    |
+| Type of Support Requested/Provided         | CareConnect-QuestionnaireResponse-1.item(supportedRequestedOrProvided)                    | Required                    |
 
 ## Resource Population Requirements and Guidance ##
 
