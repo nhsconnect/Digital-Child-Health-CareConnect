@@ -368,7 +368,7 @@ This example models a post-partum Observations panel comprising Observations for
 - Body temperature  
 - Hemoglobin saturation with oxygen  
 
-<script src="https://gist.github.com/IOPS-DEV/646f784bcb1db6e7aa3d924aaaf423d1.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/b6a25d626c75a08768f5e96ed56c1888.js"></script>
 
 
 ## Profile Change Mappings for Observations ##
