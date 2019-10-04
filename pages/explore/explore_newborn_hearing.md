@@ -171,14 +171,14 @@ The CareConnect-Location-1 resource included as part of the event message SHALL 
 
 The CareConnect-Practitioner-1 resource included as part of the event message SHALL conform to the [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 0..1 |
 
 
 ### [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 
 The CareConnect-PractitionerRole-1 resource included as part of the event message SHALL conform to the [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 0..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -193,7 +193,7 @@ The CareConnect-PractitionerRole-1 resource included as part of the event messag
 
 The CareConnect-Procedure-1 resource included as part of the event message SHALL conform to the [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 0..6 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -208,7 +208,7 @@ For each of the Procedure resources representing a Test Outcome:
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
 | Procedure.code.coding.code | 1..1 | Fixed Value: 413083006 |
 | Procedure.code.coding.display | 1..1 | Fixed Value: Automated auditory brainstem response test |
-| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AABRHearingTest-Outcome-1 |
 
 
 ### CareConnect-Procedure-1 (AOAE  Hearing Test)
@@ -218,14 +218,14 @@ For each of the Procedure resources representing a Test Outcome:
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
 | Procedure.code.coding.code | 1..1 | Fixed Value: 446077009 |
 | Procedure.code.coding.display | 1..1 | Fixed Value: Automated otoacoustic emission test |
-| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
+| Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AOAEHearingTest-Outcome-1 |
 
 
 ### [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
 
 The CareConnect-Observation-1 resource included as part of the event message SHALL conform to the [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 1..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -237,7 +237,7 @@ The CareConnect-Observation-1 resource included as part of the event message SHA
 
 The CareConnect-Communication-1 resource included as part of the event message SHALL conform to the [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | TBC |
+| Resource Cardinality | 0..1 |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |

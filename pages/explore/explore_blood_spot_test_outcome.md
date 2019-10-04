@@ -219,7 +219,7 @@ For each of the Procedure resources representing a Test Outcome:
 | --- | --- | --- |
 | Procedure.code.coding.system | 1..1 | Fixed Value: http://snomed.info/sct |
 | Procedure.code.coding.code | 1..1 | Fixed Value: 940221000000103 |
-| Procedure.code.coding.display | 1..1 | Fixed Value: Blood spot maple syrup urine disease screening test |
+| Procedure.code.coding.display | 1..1 | Fixed Value: Blood spot MSUD (maple syrup urine disease) screening test |
 | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-BloodSpotOutcome-1 |
 
 ### CareConnect-Procedure-1 (Blood Spot Screening, Glutaric Aciduria Type 1)
