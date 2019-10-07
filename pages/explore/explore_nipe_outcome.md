@@ -96,10 +96,25 @@ The Event-MessageHeader-1 resource included as part of the event message SHALL c
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-| extension(messageEventType) | 1..1 |  |
+| id | 1..1 | An originator/publisher unique publication reference, which will use a UUID format |
+| extension(routingDemographics) | 1..1 | The extension MUST contain the details of the patient who is the focus of this event message. |
+| extension(routingDemographics)
+ .extension(nhsNumber) | 1..1 | The extension MUST contain the patient’s NHS Number identifier and is used by the NEMS for routing event messages to subscribers. |
+| extension(routingDemographics)
+ .extension(name) | 1..1 | The extension MUST contain the human name element containing the patient’s official given and family names as recognised by PDS, and match the NHS number in the routingDemographics extension. |
+| extension(routingDemographics)
+ .extension(birthDateTime) | 1..1 | The extension MUST contain the patient’s Date Of Birth which matches the NHS number in the routingDemographics extension. |
+| meta.versionId | 0..1 | Message Sequencing - A sequence number for the purpose of ordering messages for processing. The sequence number must be an integer which is patient and event-type specific and the publisher must increment the sequence number each time a new event of the same type is issued by the same system for the same patient. |
+| meta.lastUpdated | 0..1 | Message Sequencing - A FHIR instant (time stamp with sub-second accuracy) which represents the point in time that the change occurred which should be used for ordering messages for processing. |
+| extension(eventMessageType) | 1..1 | The type value which shall appear in this element will be defined within the separate event message implementation guide for each of the event messages, as the value will depend on the life cycle of the specific event message. |
 | event | 1..1 | Fixed Value: nipe-outcome-1 ​NIPE outcome) |
-| responsible | 1..1 | This will reference the responsible Organization resource |
-| focus | 1..1 | This will reference the CareConnect-Encounter-1 resource which contains information relating to the event message. |
+| source | 1..1 | The IT system which holds the information that originated the event |
+| source.name | 1..1 | A human readable name for the IT system which holds the information that originated the event |
+| source.contact | 1..1 | The email address or telephone number to be used by subscribers to contact the publisher for any issues with event message. Additional requirements and information available on the Event Feedback Mechanism page |
+| source.contact.system | 1..1 | Must contain a value of phone or email matching the included contact method within the value element |
+| source.contact.value | 1..1 | A phone number or email address |
+| responsible | 1..1 | A reference to the organization resource which represents the organization responsible for the event. |
+| focus | 1..1 | The focus element will reference the CareConnect-Encounter-1 resource which contains information relating to the event message. |
 
 
 ### [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
@@ -136,7 +151,6 @@ The CareConnect-Patient-1 resource included as part of the event message SHALL c
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-| meta.versionId | 1..1 | This element will contain the serial change number (SCN) of the patient record within Spine at the time this event was published. |
 | identifier | 1..1 | Patient NHS Number SHALL be included within the nhsNumber identifier slice |
 | name (official) | 1..1 | Patients name as registered on PDS, included within the resource as the official name element slice |
 | birthDate | 1..1 | The patient birth date shall be included in the patient resource |
@@ -151,7 +165,7 @@ The CareConnect-Encounter-1 resource included as part of the event message SHALL
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Encounter.type.coding(childHealthEncounterType) | 1..1 | Encounter.type.coding(childHealthEncounterType) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1 |
-| Encounter.reason.coding(snomedCT) | 1..1 | Encounter.reason.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AdmissionReason-1 |
+| Encounter.reason.coding(snomedCT) | 0..1 | Encounter.reason.coding(snomedCT) SHOULD use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AdmissionReason-1 |
 | serviceProvider | 1..1 | This will reference the Organisation resource hosting the Encounter |
 | location | 1..1 | This will reference the Encounter's Location |
 | subject | 1..1 | This will reference the patient resource representing the subject of this event |
