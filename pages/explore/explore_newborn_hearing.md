@@ -53,7 +53,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 | Hearing Test Results (AABR)    | CareConnect-Procedure-1.outcome | Required                              | two occurrences of this resource are required, one for each ear |
 | Hearing Test Result (AOAE)     | CareConnect-Procedure-1.outcome |Required                               | up to four occurrences of this resource are required, with two for each test performed |
 | Summary Outcome                | CareConnect-Observation-1.valueCodeableConcept           | Mandatory                   |                                          |
-| Comment                        | CareConnect-Communication-1                  | Optional                         |                                                                        |
+| Comment                        | CareConnect-Communication-1.payload.content[x]           | Optional                    |                                          |
 
 **\*** Northgate do not record SDS Job Role Codes as part of their Child Health Screening record. As the code is typed CodeableConcept, and sliced on system, a system must be present. i.e. we can't just send:
 ```
@@ -235,7 +235,7 @@ For each of the Procedure resources representing a Test Outcome:
 | Procedure.outcome.coding(snomedCT) | 1..1 | Procedure.outcome.coding(snomedCT) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AOAEHearingTest-Outcome-1 |
 
 
-### [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+### [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1) (Hearing Screening Summary Outome)
 
 The CareConnect-Observation-1 resource included as part of the event message SHALL conform to the [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1) constrained FHIR profile and the additional population guidance as per the table below:
 
@@ -243,7 +243,7 @@ The CareConnect-Observation-1 resource included as part of the event message SHA
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-| subject | 1..1 | The number of births observation will reference the mother patient resource. |
+| subject | 1..1 | The Hearing Screening Summary Outome observation will reference the patient resource. |
 | Observation.valueCodeableConcept | 1..1 | Observation.valueCodeableConcept SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-HearingScreeningOutcome-1 |
 
 
