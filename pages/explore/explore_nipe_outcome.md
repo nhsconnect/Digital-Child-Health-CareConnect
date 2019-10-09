@@ -26,11 +26,11 @@ The following FHIR profiles are used to form the NIPE Outcome Event Message Bund
 
 ## Bundle Structure
 
-Specifies mandatory referencing within the Event Message Bundle.
+Specifies referencing within the Event Message Bundle.
 
 <div style="text-align:center; margin-bottom:20px" >
-	<a href="images/explore/dch-nipe-outcome.png" target="_blank"><img src="images/explore/dch-nipe-outcome.png"></a><br/>
-	NIPE Outcome Bundle <a href="images/explore/dch-nipe-outcome.png" target="_blank">(open in new TAB)</a>
+	<a href="images/explore/dch-nipeoutcome.png" target="_blank"><img src="images/explore/dch-nipeoutcome.png"></a><br/>
+	NIPE Outcome Bundle <a href="images/explore/dch-nipeoutcome.png" target="_blank">(open in new TAB)</a>
 </div>
 
 ### NIPE Outcome Details Event data item mapping to FHIR profiles ###
@@ -42,7 +42,7 @@ The Child Health Event data items are fulfilled by elements within the FHIR reso
 <th>DCH Data Item</th><th>FHIR resource element</th><th>Mandatory/<br/>Required/<br/>Optional</th><th>Note</th>
 </tr>
 <tr>
-<td>Date/Time</td><td>CareConnect-Encounter-1.period.start</td><td>Required</td><td></td>
+<td>Date/Time</td><td>CareConnect-Encounter-1.period.start</td><td>Mandatory</td><td></td>
 </tr>
 <tr>
 <td>ODS Site Code</td><td>CareConnect-Location-1.identifier (ODS Site Code)</td><td>Required</td><td></td>
@@ -81,7 +81,7 @@ The following requirements and resource population guidance should be followed i
 
 The Bundle resource included as part of the event message SHALL conform to the [Bundle](http://hl7.org/fhir/STU3/StructureDefinition/Bundle) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 1..1 Mandatory |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -92,18 +92,15 @@ The Bundle resource included as part of the event message SHALL conform to the [
 
 The Event-MessageHeader-1 resource included as part of the event message SHALL conform to the [Event-MessageHeader-1](https://fhir.nhs.uk/STU3/StructureDefinition/Event-MessageHeader-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 1..1 Mandatory |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | id | 1..1 | An originator/publisher unique publication reference, which will use a UUID format |
 | extension(routingDemographics) | 1..1 | The extension MUST contain the details of the patient who is the focus of this event message. |
-| extension(routingDemographics)
- .extension(nhsNumber) | 1..1 | The extension MUST contain the patient’s NHS Number identifier and is used by the NEMS for routing event messages to subscribers. |
-| extension(routingDemographics)
- .extension(name) | 1..1 | The extension MUST contain the human name element containing the patient’s official given and family names as recognised by PDS, and match the NHS number in the routingDemographics extension. |
-| extension(routingDemographics)
- .extension(birthDateTime) | 1..1 | The extension MUST contain the patient’s Date Of Birth which matches the NHS number in the routingDemographics extension. |
+| extension(routingDemographics)<br>.extension(nhsNumber) | 1..1 | The extension MUST contain the patient’s NHS Number identifier and is used by the NEMS for routing event messages to subscribers. |
+| extension(routingDemographics)<br>.extension(name) | 1..1 | The extension MUST contain the human name element containing the patient’s official given and family names as recognised by PDS, and match the NHS number in the routingDemographics extension. |
+| extension(routingDemographics)<br>.extension(birthDateTime) | 1..1 | The extension MUST contain the patient’s Date Of Birth which matches the NHS number in the routingDemographics extension. |
 | meta.versionId | 0..1 | Message Sequencing - A sequence number for the purpose of ordering messages for processing. The sequence number must be an integer which is patient and event-type specific and the publisher must increment the sequence number each time a new event of the same type is issued by the same system for the same patient. |
 | meta.lastUpdated | 0..1 | Message Sequencing - A FHIR instant (time stamp with sub-second accuracy) which represents the point in time that the change occurred which should be used for ordering messages for processing. |
 | extension(eventMessageType) | 1..1 | The type value which shall appear in this element will be defined within the separate event message implementation guide for each of the event messages, as the value will depend on the life cycle of the specific event message. |
@@ -121,7 +118,7 @@ The Event-MessageHeader-1 resource included as part of the event message SHALL c
 
 The CareConnect-Organization-1 resource included as part of the event message SHALL conform to the [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..* |
+| Resource Cardinality | 1..* Mandatory |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -134,7 +131,7 @@ The CareConnect-Organization-1 resource included as part of the event message SH
 
 The CareConnect-HealthcareService-1 resource included as part of the event message SHALL conform to the [CareConnect-HealthcareService-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HealthcareService-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 0..1 Required |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -147,7 +144,7 @@ The CareConnect-HealthcareService-1 resource included as part of the event messa
 
 The CareConnect-Patient-1 resource included as part of the event message SHALL conform to the [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 1..1 Mandatory |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -160,14 +157,14 @@ The CareConnect-Patient-1 resource included as part of the event message SHALL c
 
 The CareConnect-Encounter-1 resource included as part of the event message SHALL conform to the [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 1..1 Mandatory |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | Encounter.type.coding(childHealthEncounterType) | 1..1 | Encounter.type.coding(childHealthEncounterType) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-ChildHealthEncounterType-1 |
 | Encounter.reason.coding(snomedCT) | 0..1 | Encounter.reason.coding(snomedCT) SHOULD use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-AdmissionReason-1 |
 | serviceProvider | 1..1 | This will reference the Organisation resource hosting the Encounter |
-| location | 1..1 | This will reference the Encounter's Location |
+| location | 0..1 Required | This will reference the Encounter's Location |
 | subject | 1..1 | This will reference the patient resource representing the subject of this event |
 
 
@@ -175,21 +172,21 @@ The CareConnect-Encounter-1 resource included as part of the event message SHALL
 
 The CareConnect-Location-1 resource included as part of the event message SHALL conform to the [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 0..1 |
+| Resource Cardinality | 0..1 Required |
 
 
 ### [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 
 The CareConnect-Practitioner-1 resource included as part of the event message SHALL conform to the [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 1..1 Mandatory |
 
 
 ### [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 
 The CareConnect-PractitionerRole-1 resource included as part of the event message SHALL conform to the [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 1..1 |
+| Resource Cardinality | 0..1 Required |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -257,7 +254,7 @@ For each of the Procedure resources representing a Test Outcome:
 
 The CareConnect-Communication-1 resource included as part of the event message SHALL conform to the [CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication-1) constrained FHIR profile and the additional population guidance as per the table below:
 
-| Resource Cardinality | 0..1 |
+| Resource Cardinality | 0..1 Optional |
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
@@ -271,7 +268,7 @@ The CareConnect-Communication-1 resource included as part of the event message S
 
 ## DCH NIPE Outcome Example ##
 
-<script src="https://gist.github.com/IOPS-DEV/3944252411ca6ebbc29160b0b94e9395.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/a90f09a24af78a977cae93b5c392ab3f.js"></script>
 
 ## Profile Change Mappings for NIPE Outcome ##
 
