@@ -60,17 +60,17 @@ All Observations are Required
 |--------------------------|---------------------------------------------------------------|---------------------------------------------|
 | Birth Weight             | CareConnect-Observation-1.valueQuantity                                     | Observation.code SHALL use 364589006 \| Birth weight \| |
 | Birth Head Circumference | CareConnect-Observation-1.valueQuantity                          | Observation.code SHALL use 169876006 \| Birth head circumference \| |
-| Head Circumference       | CareConnect-Observation-1.valueQuantity                          | Observation.code SHALL use 363812007 \| Head circumference \| |
+| Head circumference       | CareConnect-Observation-1.valueQuantity                          | Observation.code SHALL use 363812007 \| Head circumference \| |
 | Weight                   | CareConnect-Observation-1.valueQuantity                                     | Observation.code SHALL use 27113001 \| Body weight \| |
 | Body Height              | CareConnect-Observation-1.valueQuantity                                     | Observation.code SHALL use 50373000 \| Body height \| |
-| Body Length              | CareConnect-Observation-1.valueQuantity                                     | Observation.code SHALL use 248334005 \| Body length \| |
+| Body Length              | CareConnect-Observation-1.valueQuantity                                     | Observation.code SHALL use 248334005 \| Length of body \| |
 | BMI Centile              | CareConnect-Observation-1.valueQuantity                                 | Observation.code SHALL use 896691000000102 \| Child body mass index centile \| |
 | Systolic Blood Pressure  | CareConnect-BloodPressure-Observation-1.component[systolicComponent].valueQuantity     | * |
 | Diastolic Blood Pressure | CareConnect-BloodPressure-Observation-1.component[diastolicComponent].valueQuantity    | * |
 | Heart Rate               | CareConnect-HeartRate-Observation-1.valueQuantity                                      | |
-| Temperature              | CareConnect-BodyTemperature-Observation-1.valueQuantity                                | For child health, a further Observation.code of 386725007 should be added, with userSelected set to true |
+| Temperature              | CareConnect-BodyTemperature-Observation-1.valueQuantity                                | For child health, a further Observation.code of 386725007 \| Body temperature \| should be added, with userSelected set to true |
 | Respiration Rate         | CareConnect-RespiratoryRate-Observation-1.valueQuantity                                | |
-| O2 Saturation            | CareConnect-OxygenSaturation-Observation-1.valueQuantity                               | For child health, a further Observation.code of 431314004 should be added, with userSelected set to true |
+| O2 Saturation            | CareConnect-OxygenSaturation-Observation-1.valueQuantity                               | For child health, a further Observation.code of 431314004 \| Peripheral oxygen saturation \| should be added, with userSelected set to true |
 | NCMP Withdrawal Reason   | CareConnect-Observation-1.valueCodeableConcept.Coding.code          | ** |
 
 \* Relevant blood pressure measurement SNOMED CT coding is fixed in the CareConnect-BloodPressure-Observation-1 profile.  
