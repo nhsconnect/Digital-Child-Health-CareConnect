@@ -7,6 +7,8 @@ permalink: explore_nipe_outcome.html
 summary: "The FHIR profiles used for the NIPE Outcome Event Message Bundle"
 ---
 
+{% include important.html content="NIPE Outcome message revised after review and supplier feedback."%}
+
 ## FHIR Profiles ##
 
 The following FHIR profiles are used to form the NIPE Outcome Event Message Bundle:

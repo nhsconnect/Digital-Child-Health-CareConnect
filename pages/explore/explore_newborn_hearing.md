@@ -7,6 +7,8 @@ permalink: explore_newborn_hearing.html
 summary: "The FHIR profiles used for the Newborn Hearing Event Message Bundle"
 ---
 
+{% include important.html content="Newborn Hearing message revised after review and supplier feedback."%}
+
 ## FHIR Profiles ##
 
 The following FHIR profiles are used to form the Newborn Hearing Event Message Bundle:

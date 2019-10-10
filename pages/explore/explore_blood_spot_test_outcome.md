@@ -7,6 +7,8 @@ permalink: explore_blood_spot_test_outcome.html
 summary: "The FHIR profiles used for the Blood Spot Test Outcome Event Message Bundle"
 ---
 
+{% include important.html content="Blood Spot Test Outcome message revised after review and supplier feedback."%}
+
 ## FHIR Profiles ##
 
 The following FHIR profiles are used to form the Blood Spot Test Outcome Event Message Bundle:
