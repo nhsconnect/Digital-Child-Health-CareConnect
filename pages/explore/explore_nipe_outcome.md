@@ -106,7 +106,7 @@ The Event-MessageHeader-1 resource included as part of the event message SHALL c
 | meta.versionId | 0..1 | Message Sequencing - A sequence number for the purpose of ordering messages for processing. The sequence number must be an integer which is patient and event-type specific and the publisher must increment the sequence number each time a new event of the same type is issued by the same system for the same patient. |
 | meta.lastUpdated | 0..1 | Message Sequencing - A FHIR instant (time stamp with sub-second accuracy) which represents the point in time that the change occurred which should be used for ordering messages for processing. |
 | extension(eventMessageType) | 1..1 | The type value which shall appear in this element will be defined within the separate event message implementation guide for each of the event messages, as the value will depend on the life cycle of the specific event message. |
-| event | 1..1 | Fixed Value: nipe-outcome-1 ​NIPE outcome) |
+| event | 1..1 | Fixed Value: nipe-outcome-1 ​NIPE outcome |
 | source | 1..1 | The IT system which holds the information that originated the event |
 | source.name | 1..1 | A human readable name for the IT system which holds the information that originated the event |
 | source.contact | 1..1 | The email address or telephone number to be used by subscribers to contact the publisher for any issues with event message. Additional requirements and information available on the Event Feedback Mechanism page |
@@ -125,7 +125,7 @@ The CareConnect-Organization-1 resource included as part of the event message SH
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | identifier.system | 1..1 | Fixed value: https://fhir.nhs.uk/Id/ods-organization-code |
-| identifier.system | 1..1 | Organisation’s ODS Organization Code |
+| identifier.value | 1..1 | Organisation’s ODS Organization Code |
 | name | 1..1 | Organisation’s Name |
 
 

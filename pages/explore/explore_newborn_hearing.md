@@ -108,7 +108,7 @@ The CareConnect-Organization-1 resource included as part of the event message SH
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | identifier.system | 1..1 | Fixed value: https://fhir.nhs.uk/Id/ods-organization-code |
-| identifier.system | 1..1 | Organisation’s ODS Organization Code |
+| identifier.value | 1..1 | Organisation’s ODS Organization Code |
 | name | 1..1 | Organisation’s Name |
 
 
@@ -178,8 +178,6 @@ The CareConnect-PractitionerRole-1 resource included as part of the event messag
 | organization | 1..1 | This will reference the Organization resource responsible for the event |
 | practitioner | 1..1 | This will reference the Practitioner resource responsible for the event |
 | PractitionerRole.code(careProfessionalType) | 1..1 | PractitionerRole.code(careProfessionalType) SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-ProfessionalType-1 |
-| PractitionerRole.code(keyWorkerStatus) | 0..1 | If Practitioner is a key worker, PractitionerRole.codekeyWorkerStatus SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-KeyWorkerStatus-1 |
-| PractitionerRole.specialty | 1..1 | PractitionerRole.specialty SHALL use a value from https://fhir.nhs.uk/STU3/ValueSet/DCH-Specialty-1 |
 
 
 ### [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)

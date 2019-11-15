@@ -94,7 +94,7 @@ The CareConnect-Organization-1 resource included as part of the event message SH
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
 | identifier.system | 1..1 | Fixed value: https://fhir.nhs.uk/Id/ods-organization-code |
-| identifier.system | 1..1 | Organisation’s ODS Organization Code |
+| identifier.value | 1..1 | Organisation’s ODS Organization Code |
 | name | 1..1 | Organisation’s Name |
 
 
