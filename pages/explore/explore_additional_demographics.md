@@ -138,7 +138,6 @@ The CareConnect-Patient-1 resource included as part of the event message SHALL c
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-| meta.versionId | 1..1 | This element will contain the serial change number (SCN) of the patient record within Spine at the time this event was published. |
 | identifier(localIdentifier) | 1..1 | Local Patient Identifier SHALL be included within the localIdentifier identifier slice |
 | identifier(localIdentifier),assigner | 1..1 | This will reference the Local Patient Identifier assigning Organisation |
 | identifier | 1..1 | Patient NHS Number SHALL be included within the nhsNumber identifier slice |
