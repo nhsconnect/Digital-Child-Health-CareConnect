@@ -123,7 +123,6 @@ The CareConnect-Patient-1 resource included as part of the event message SHALL c
 
 | Element | Cardinality | Additional Guidance |
 | --- | --- | --- |
-
 | identifier | 1..1 | Patient NHS Number SHALL be included within the nhsNumber identifier slice |
 | name (official) | 1..1 | Patients name as registered on PDS, included within the resource as the official name element slice |
 | birthDate | 1..1 | The patient birth date shall be included in the patient resource |
